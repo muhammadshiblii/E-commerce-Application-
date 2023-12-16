@@ -3,6 +3,7 @@ import './Adminlogin.css'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
+
 const Adminlogin = () => {
 
 
@@ -41,11 +42,14 @@ if(res.status!==404){
       <div className="form-container sign-up-container">
         <form action="#"  className='forms'>
           <h1 className='headingg'>Create Account</h1>
+
+
           <div className="social-container">
             <a href="#" className="social"><i className="fa fa-facebook" aria-hidden="true"></i></a>
             <a href="#" className="social"><i className="fab fa-google-plus-g"></i></a>
             <a href="#" className="social"><i className="fab fa-linkedin-in"></i></a>
           </div>
+          
           <span className='spans' >or use your email for registration</span>
         </form>
       </div>
@@ -53,9 +57,9 @@ if(res.status!==404){
         <form action="#" className='forms'>
           <h1 className='headingg'>Login in</h1>
           <div className="social-container">
-            <a href="#" className="social"><i className="fab fa-facebook-f"></i></a>
-            <a href="#" className="social"><i className="fab fa-google-plus-g"></i></a>
-            <a href="#" className="social"><i className="fab fa-linkedin-in"></i></a>
+          <a href="#" className="social"><i className="fa fa-facebook"></i></a>
+            <a href="#" className="social"><i className="fa fa-google"></i></a>
+            <a href="#" className="social"><i className="fa fa-linkedin"></i></a>
           </div>
           <span className='spans'>or use your account</span>
           <input type="email" placeholder="Email" name="email"  onChange={(e)=>setEmail(e.target.value)} />

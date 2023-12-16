@@ -67,9 +67,9 @@ const Adminregister = () => {
         <form action="#" className='forms'>
           <h1 className='headingg'>Register In</h1>
           <div className="social-container">
-            <a href="#" className="social"><i className="fab fa-facebook-f"></i></a>
-            <a href="#" className="social"><i className="fab fa-google-plus-g"></i></a>
-            <a href="#" className="social"><i className="fab fa-linkedin-in"></i></a>
+            <a href="#" className="social"><i className="fa fa-facebook"></i></a>
+            <a href="#" className="social"><i className="fa fa-google"></i></a>
+            <a href="#" className="social"><i className="fa fa-linkedin"></i></a>
           </div>
           <span className='spans'>or use your account</span>
           <input type="text" placeholder="username" name='username' onChange={GetData} />
