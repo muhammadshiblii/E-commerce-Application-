@@ -60,7 +60,7 @@ if(res.status!==404){
           <span className='spans'>or use your account</span>
           <input type="email" placeholder="Email" name="email"  onChange={(e)=>setEmail(e.target.value)} />
           <input type="password" placeholder="Password" name="password"  onChange={(e)=>setPassword(e.target.value)} />
-          <a href="#" className='social'>Forgot your password?</a>
+          <Link className='social' to={'/Adminfrgpwd'}>Forgot your password?</Link>
           <button className='signin'onClick={Logining}>Login</button>
         </form>
       </div>

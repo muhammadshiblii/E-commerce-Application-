@@ -5,6 +5,9 @@ import pkg from "jsonwebtoken";
 const {sign}=pkg
 
 
+
+
+
 export async function AddAdmin(req,res){
     try {
         const {username,email,phone,password}=req.body;
@@ -31,6 +34,8 @@ export async function AddAdmin(req,res){
 }
 
 
+
+
 export async function AdminLogin(req, res) {
     try {
      console.log(req.body);
@@ -47,9 +52,13 @@ export async function AdminLogin(req, res) {
      res.end();
      
     } catch (error) {
-     console.log(error); 
+     console.log(error);
 }
 }
+
+
+
+
 
 export async function home(req,res)
 {
@@ -61,4 +70,13 @@ export async function home(req,res)
   } catch (error) {
     res.status(404).send(error)
   }
+}
+
+export async function forgotAdminpassword(req, res) {
+  const {email} = req.params;
+  const updatedPassword = req.body.password;
+  const saltRounds = 10;
+  const hashedPassword = await bcrypt.hash(updatedPassword, saltRounds);
+  let task = await admin_schema.updateOne({ email }, { $set: { password: hashedPassword } });
+  res.status(200).send(task);
 }

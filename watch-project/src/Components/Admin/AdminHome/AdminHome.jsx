@@ -4,7 +4,7 @@ const AdminHome = () => {
   return (
     <div>
       
-    admin home
+ 
 
     </div>
   )
