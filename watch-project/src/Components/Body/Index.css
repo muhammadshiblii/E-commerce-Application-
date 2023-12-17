@@ -1,0 +1,138 @@
+.main-ind{
+    background-color: rgba(9, 9, 9, 0.937);
+    height: 83px;
+    width: 100%;
+}
+.log-phone-ind{
+    color: white;
+    font-size: 13px;
+    margin-left: 2%;
+    margin-top: 20px;
+}
+
+.text-sub-ind{
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    margin-left: 10%;
+}
+.main-sub-ind{
+    display: flex;
+    justify-content: space-evenly;
+}
+.log-cart-ind{
+    color: white;
+    font-size: 13px;
+    margin-right: 2%;
+    margin-top: 20px;
+}
+/* ////// black ////// */
+
+
+/* img */
+.center-ind{
+    display: flex;
+    justify-content: center;
+}
+/* //////nav ////// */
+.nav-main-ind {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 10px;
+  
+}
+.nav-main-ind a span {
+    color: rgb(0, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.navbar-id-color{
+    background-color: #dedddd;
+    border-top: 0.3px solid #1e1e1e;
+    background: -webkit-linear-gradient(to right, #fffdfd, #fffdfe);
+	background: linear-gradient(to right, #ffffff, #f6f5f5);
+    margin-top: 10px;
+     
+}
+.HOME-IND{
+    color: #1e1e1e;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+.banner h2 {
+    text-align: center;
+    padding-top: 10%;
+    color: white;
+    font-size: 50px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+.banner{
+    background-image:linear-gradient(rgba(36, 34, 34, 0.283),rgba(39, 38, 38, 0)), url("../../../public/F_F_-_Gold.webp");
+    height: 80vh;
+    background-size: cover;
+    margin-top: 20px;
+
+}
+.buttons-full-data a:hover {
+    padding: 10px 32px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: 1.5px solid rgb(182, 27, 27);
+    background-color: rgb(182, 27, 27);
+    transition: .5s;
+
+
+}
+.buttons-full-data a {
+    padding: 10px 32px;
+    color: white;
+    background-color: red;
+    text-decoration: none;
+    border-radius: 20px;
+
+
+}
+#Linkkkkss{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+.buttons-full-data{
+    margin-top: 24%;
+    margin-right:18%;
+
+}
+.mainbtn {
+    text-align: center;
+    padding-top: 3%;
+
+
+}
+.main-ind-brown{
+    background-color:#c0a879;
+    height: 133px;
+    width: 100%;
+  
+
+}
+.data-brown-ind{
+    color: white;
+    font-size: 23px;
+    text-align: center;
+    
+
+}
+#holi{
+    font-weight: 600;
+
+}
+#EMI{
+    font-size: 18px;
+}
+.data-brown-ind a{
+    color: white;
+    font-size: 17px;
+}
+
