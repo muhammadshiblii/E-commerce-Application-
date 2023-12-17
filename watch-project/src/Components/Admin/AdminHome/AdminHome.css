@@ -1,0 +1,67 @@
+.nav-main {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    padding: 10px;
+  
+}
+
+.nav-main a span {
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.nav-main a :hover {
+    color: rgb(237, 232, 232);
+}
+
+/* no need gift head  */
+.nav-gifts {
+    display: none;
+}
+/* navbar section  */
+.navbar {
+    background-color: #FF416C;
+    border: 1px solid #f9ece6;
+    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+	background: linear-gradient(to right, #FF4B2B, #FF416C);
+    margin-top: 0.5px;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+     border-bottom-left-radius: 2px;
+
+
+}
+
+.display-username .fa-user{
+    margin-right: 10px;
+    background-color: white;
+    padding: 7px 10px;
+    color: rgb(2, 7, 61);
+    border-radius: 50%;
+}
+
+.header-left{
+    width: 80%;
+    padding-top: 20px;
+}
+
+@media (min-width:280px) and (max-width:575.98px) {
+    .nav-main {
+        display: inline-block;
+        /* justify-content: center; */
+        text-align: center;
+        gap: 13px;
+        margin-top: 15px;
+        padding: 10px;
+
+    }
+    .nav-gifts {
+        font-weight: 750;
+        display: inline;
+        font-size: 26px;
+        letter-spacing: 1px;
+
+    }
+}

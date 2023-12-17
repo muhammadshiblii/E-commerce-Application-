@@ -25,7 +25,7 @@ if(res.status!==404){
   const admin_token=data.token
   localStorage.setItem("admin_token",JSON.stringify(admin_token))
   alert("Successfully logined")
-  navigate("/Adminregister")
+  navigate("/Adminhome")
 }
 } catch (error) {
   console.log(error);

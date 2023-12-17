@@ -36,25 +36,31 @@ export async function AddAdmin(req,res){
 
 
 
+
+
 export async function AdminLogin(req, res) {
-    try {
-     console.log(req.body);
-     const { email, password } = req.body;
-     const usr = await admin_schema.findOne({ email })
-     console.log(usr);
-     if (usr === null) return res.status(404).send("email or password doesnot exist");
-     const success =await bcrypt.compare(password, usr.password)
-     console.log(success);
-     if (success !== true) return res.status(404).send("email or password doesnot exist");
-     const token = await sign({ email }, process.env.JWT_KEY, { expiresIn: "24h" })
-     console.log(token);
-     res.status(200).send({ msg: "successfullly login", token })
-     res.end();
-     
-    } catch (error) {
-     console.log(error);
+  try {
+   console.log(req.body);
+   const { email, password } = req.body;
+   const usr = await admin_schema.findOne({ email })
+   console.log(usr);
+   if (usr === null) return res.status(404).send("email or password doesnot exist");
+   const success =await bcrypt.compare(password, usr.password)
+   console.log(success);
+   const {username}=usr
+   if (success !== true) return res.status(404).send("email or password doesnot exist");
+   const token = await sign({ username }, process.env.JWT_KEY, { expiresIn: "24h" })
+   console.log(username);
+   console.log(token);
+   res.status(200).send({ msg: "successfullly login", token })
+  //  res.end();
+   
+  } catch (error) {
+   console.log(error);
 }
 }
+
+
 
 
 
@@ -62,21 +68,40 @@ export async function AdminLogin(req, res) {
 
 export async function home(req,res)
 {
+ 
   try {
-    console.log(req.user);
-    const username=req.user.usr.user
-    console.log(username);
+    
+     const{username}=req.user;
     res.status(200).send({msg:`${username}`})
-  } catch (error) {
+   } 
+   catch (error) {
     res.status(404).send(error)
   }
 }
 
-export async function forgotAdminpassword(req, res) {
-  const {email} = req.params;
-  const updatedPassword = req.body.password;
-  const saltRounds = 10;
-  const hashedPassword = await bcrypt.hash(updatedPassword, saltRounds);
-  let task = await admin_schema.updateOne({ email }, { $set: { password: hashedPassword } });
+
+
+
+
+export async function forgotAdminpwd(req, res) {
+  const {email,password}=req.body;
+  console.log(email);
+  const hashedPassword = await bcrypt.hash(password,10);
+  let task = await admin_schema.updateOne( {email} , { $set: { password: hashedPassword } });
+  console.log(task);
   res.status(200).send(task);
 }
+
+
+
+
+
+
+export async function forgotUsername(req,res){
+  const {username}=req.params;
+  console.log(username);
+  let task=await admin_schema.findOne({username})
+  console.log(task);
+  res.status(200).send(task)
+}
+

@@ -32,7 +32,7 @@ const Adminregister = () => {
       console.log(val);
       if(res.status==201){
         alert("Successfully registered")
-        navigate("/Adminhome")
+        navigate("/Adminlogin")
       }
     }
   
@@ -80,7 +80,7 @@ const Adminregister = () => {
         
          
           <a href="#" className='social'>Enjoy with us</a>
-          <button className='signin' onClick={Register}>Register</button>
+         <Link to={"/Adminlogin"}><button className='signin' onClick={Register}>Register</button></Link> 
         </form>
       </div>
       <div className="overlay-container">
@@ -88,7 +88,7 @@ const Adminregister = () => {
           <div className="overlay-panel overlay-left">
             <h1 className='headingg'>Welcome Back!</h1>
             <p className='para'>To keep connected with us please login with your personal info</p>
-            <button className="ghost" id="signIn">Register</button>
+            <Link to={"/Adminlogin"}><button className='signin'>Register</button></Link> 
           </div>
           <div className="overlay-panel overlay-right">
             <h1 className='headingg'>Hello, Friend!</h1>
