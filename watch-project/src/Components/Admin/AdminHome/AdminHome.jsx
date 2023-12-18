@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Adminhome.css'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import { MdDelete } from "react-icons/md";
 
 const AdminHome = () => {
 
@@ -9,6 +10,7 @@ const AdminHome = () => {
 
     const navigate = useNavigate()
     const [msg, setMsg] = useState("")
+    const [count,setCount]=useState(0)
     const value = JSON.parse(localStorage.getItem('admin_token'));
     const getName = async () => {
         const res = await axios.get("http://localhost:3003/wholewatch/home", {
@@ -20,6 +22,8 @@ const AdminHome = () => {
     useEffect(() => {
         getName()
     }, [])
+
+
 
     const Logout = (e) => {
         e.preventDefault();
@@ -33,15 +37,42 @@ const AdminHome = () => {
 
 
 
-    const [getEmp,setEmp]=useState([])
-    const getEmployee=async()=>{
-        const res=await axios.get("http://localhost:3003/wholewatch/categorygetdata")
+    const [getEmp, setEmp] = useState([])
+    const getEmployee = async () => {
+        const res = await axios.get("http://localhost:3003/wholewatch/categorygetdata")
         setEmp(res.data)
+    }
+
+    useEffect(() => {
+        getEmployee()
+    })
+
+
+
+
+    ////delete
+    const deleteCategory = async (id) => {
+        const isConfirmed = window.confirm("Are you sure you want to delete this Category?");
+     
+        if (isConfirmed) {
+        try {
+        const res = await axios.delete(`http://localhost:3003/wholewatch/deletecategory/${id}`);
+           console.log('Category deleted:', res.data);
+           setTimeout(()=>{
+               navigate("/adminhome");
+           },1000);
+
+          } catch (error) {
+           console.error('Error deleting Category:', error);
+          }
+        } else {
+        console.log('Deletion cancelled.');
         }
-    
-        useEffect(()=>{
-            getEmployee()
-        })
+        setCount(count+1)
+   }
+     
+     useEffect(()=>{
+   },[count])
 
 
 
@@ -110,7 +141,7 @@ const AdminHome = () => {
             </nav>
 
 
-         
+
 
 
             <div className="display-username">
@@ -133,26 +164,32 @@ const AdminHome = () => {
                 <div className='main1'>
                     <div className='borderleft'>
 
-                      
-
-                      
-                         <div className='catogories'>
-                         Catogories
-                     </div>
 
 
-                
-               
-                    { getEmp.map((data,index)=>
-                     <div key={index} className='catogoryname'>
-                         <div>
-                         {data.category_name}
-                                
-                         </div></div>
-                     )
-                      }
 
-                       
+                        <div className='catogories'>
+                            Catogories
+                        </div>
+
+
+
+
+                        {getEmp.map((data, index) =>
+                            <div key={index} className='catogoryname'>
+                                <div>
+                                    {data.category_name}
+
+                                </div>
+
+                                <div onClick={() => deleteCategory(data._id)} className='delete-btn'>
+                                    <MdDelete />
+                                </div>
+
+                            </div>
+                        )
+                        }
+
+
 
 
 

@@ -150,6 +150,9 @@ justify-content: space-between;
 .link3:hover{
     color: black;
 }
+.delete-btn{
+    margin-left: 10px;
+}
 
 
 

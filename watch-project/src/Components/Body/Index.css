@@ -185,4 +185,161 @@
 }
 
 
+/* footer  */
+.footer-main {
+   
+    background: linear-gradient( #08080b, #3a3838, #2b2a2a);
+    height: 350px;
+    margin-top: 20px;
+    color: #ffffff;
+
+}
+
+.footer-icons-main {
+    text-align: center;
+
+}
+
+.footer-icons-main i {
+    margin-top: 5%;
+    margin-right: 20px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.footer-flex-main-contents {
+    display: flex;
+    width: 88%;
+    gap: 30px;
+    margin-left: 3%;
+    margin-top: 2%;
+}
+
+/* footer full first  */
+.footer-first {
+    margin-top: 2%;
+    width: 35%;
+    margin-left: 8%;
+}
+
+.footer-first h3 {
+    font-weight: bold;
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+.footer-first p {
+    color: #cbc9c9;
+
+}
+
+/* foooter full second  */
+.footer-second {
+    margin-top: 2%;
+    width: 35%;
+    margin-left: 2%;
+}
+
+.footer-second h3 {
+    font-weight: bold;
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+.footer-second input {
+    width: 98%;
+    padding: 7px 10px;
+    margin-bottom: 17px;
+}
+
+.footer-second input::placeholder {
+    font-size: bold;
+    font-weight: 400;
+}
+
+.footer-second a {
+    text-decoration: none;
+    padding: 8px 40px;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    background: #0c02046b;
+}
+
+.footer-second a:hover {
+    color: #ffffff;
+
+}
+
+/* footer full third  */
+.footer-third {
+    margin-top: 2%;
+    width: 35%;
+    margin-left: 2%;
+}
+
+.footer-third h3 {
+    font-weight: bold;
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+.footer-third p {
+    color: #cbc9c9;
+
+}
+
+/* footer full-fourth  */
+.footer-four {
+    width: 35%;
+    margin-left: 3%;
+    margin-top: 2%;
+
+}
+
+.footer-four h3 {
+    font-weight: bold;
+    font-size: 19px;
+    margin-bottom: 25px;
+
+}
+
+.footer-four a {
+    color: #cbc9c9;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.footer-four a:hover {
+    color: #ffffff;
+}
+
+.footer-four-for-margin i {
+    margin-top: 14px;
+}
+/* just footer-border  */
+.foooter-just-border{
+    border-bottom: 1px solid #cbc9c9;
+    width: 66%;
+    margin-left: 15%;
+    margin-top: 15px;
+}
+.last-footer-para{
+    text-align: center;
+    margin-top: 20px;
+}
+.last-footer-para p{
+    color: #cbc9c9;
+}
+.last-footer-para a{
+    text-decoration: none;
+    color: #cbc9c9;
+
+}
+.last-footer-para a:hover{
+    color: #cbc9c9;
+}
+
+
 

@@ -33,21 +33,7 @@ export async function AddAdmin(req,res){
     }
     
 }
-export async function AddCategory(req, res) {
-  try {
-    const { category_name, Description } = req.body;
-    console.log(category_name, Description);
-    if (!(category_name && Description)) {
-      return res.status(400).send("Fields are empty");
-    }
-    const task=await category_schema.create({ category_name, Description });
 
-    res.status(200).send(task);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("Internal Server Error");
-  }
-}
 
 
 
@@ -121,7 +107,7 @@ export async function forgotUsername(req,res){
   res.status(200).send(task)
 }
 
-
+ ////// Category
 export async function Category_getdata(req,res){
   let task=await category_schema.find()
       res.status(200).send(task)
@@ -129,4 +115,30 @@ export async function Category_getdata(req,res){
 
 }
 
+export async function AddCategory(req, res) {
+  try {
+    const { category_name, Description } = req.body;
+    console.log(category_name, Description);
+    if (!(category_name && Description)) {
+      return res.status(400).send("Fields are empty");
+    }
+    const task=await category_schema.create({ category_name, Description });
+
+    res.status(200).send(task);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
+}
+
+export function deleteCategory(req,res)
+{
+    const{id}=req.params;
+    const data= category_schema.deleteOne({_id:id})
+    data.then((resp)=>{
+        res.status(200).send(resp)
+    }).catch((error)=>{
+        res.status(404).send(error)
+    })
+}
 
