@@ -145,7 +145,8 @@ const AdminHome = () => {
 
 
             <div className="display-username">
-                <span><i className="fa fa-user" aria-hidden="true"></i>{msg}<button onClick={Logout}><i className="fa fa-sign-out" aria-hidden="true"></i></button></span>
+                <span className='admin-home-btn-user'><i className="fa fa-user" aria-hidden="true"></i>{msg}
+                <button onClick={Logout}><i className="fa fa-sign-out logggggg" aria-hidden="true"></i></button></span>
             </div>
             <div className="header-left">
                 <Link to='/Adminlogin' className='back-btn'>BACK</Link>
@@ -176,7 +177,7 @@ const AdminHome = () => {
 
                         {getEmp.map((data, index) =>
                             <div key={index} className='catogoryname'>
-                                <div>
+                                <div className='categorynames-only'>
                                     {data.category_name}
 
                                 </div>
