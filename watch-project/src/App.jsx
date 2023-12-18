@@ -6,6 +6,7 @@ import Adminregister from './Components/Admin/Adminregister/Adminregister'
 import Adminfrgpwd from './Components/Admin/AdminFgtPwd/Adminfrgpwd'
 import AdminHome from './Components/Admin/AdminHome/Adminhome'
 import Category from './Components/Admin/Category/Category'
+import Products from './Components/Admin/Products/Products'
 
 function App() {
  
@@ -21,6 +22,7 @@ function App() {
       <Route path='/Adminregister' Component={Adminregister}/>
       <Route path='/Adminfrgpwd' Component={Adminfrgpwd}/>
       <Route path='/Category' Component={Category}/>
+      <Route path='/products' Component={Products}/>
 
       </Routes>
       

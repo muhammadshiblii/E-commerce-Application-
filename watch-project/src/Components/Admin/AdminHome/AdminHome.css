@@ -50,9 +50,10 @@
     margin-top: 10px; 
     font-size: 20px;
 }
-.back{
+.header-left{
     width: 10%;
-    padding-top: 30px;
+    padding-top: 10px;
+    margin-left: 40px;
 }
 .back-btn{
     color: black;

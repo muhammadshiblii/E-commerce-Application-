@@ -3,6 +3,8 @@ import './Adminhome.css'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { MdDelete } from "react-icons/md";
+import { HiSquaresPlus } from "react-icons/hi2";
+import { BsAppIndicator } from "react-icons/bs";
 
 const AdminHome = () => {
 
@@ -202,13 +204,13 @@ const AdminHome = () => {
 
                             <Link to={'/Category'} className='link3'>
                                 <div className='cardsm'>
-                                    <div className='catogory'></div>
+                                    <div className='catogory'><HiSquaresPlus  /></div>
                                     <div>add  category</div>
                                 </div>
                             </Link>
                             <Link to={'/products'} className='link3'>
                                 <div className='cardsm'>
-                                    <div className='products'></div>
+                                    <div className='products'><BsAppIndicator /></div>
                                     <div>add  products</div>
                                 </div>
                             </Link>
