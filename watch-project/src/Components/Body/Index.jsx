@@ -20,7 +20,7 @@ const Index = () => {
           </div>
 
           <div className="log-cart-ind">
-            <span><i className="fa fa-shopping-cart" aria-hidden="true"></i></span> <span>CART O | <Link to={'/Adminlogin'} id='Linkkkkss'><span> LOGIN</span></Link>  OR REGISTER</span>
+            <span><i className="fa fa-shopping-cart" aria-hidden="true"></i></span> <span>CART O <Link to={'/Adminlogin'} id='Linkkkkss'><span>LOGIN</span></Link>  OR REGISTER</span>
           </div>
 
         </div>
@@ -94,6 +94,8 @@ const Index = () => {
           </div>
         </div>
 
+
+
       </div>
       <div className="main-ind-brown">
        <div className="data-brown-ind">
@@ -103,6 +105,55 @@ const Index = () => {
        </div>
 
       </div>
+
+
+      {/* <!-- caro-section  --> */}
+      <div id="carouselExampleControls" className="carousel slide caro-width" data-bs-ride="carousel">
+        <div className="carousel-inner">
+          <div className="carousel-item active text-only">
+            <h4>Brad Johns</h4>
+            <h5>Default model text</h5>
+            <p>Variouseditors now use Lorem Ipsum as their default model text, and a search for lorem ipsum will
+              uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model
+              text, and a search for lorem ipsum will uncover many web sites still in their infancy. editors now use
+              Lorem Ipsum as their default model text, and a search for lorem ipsum will uncover many web sites still
+              in their infancy.</p>
+          </div>
+          <div className="carousel-item text-only">
+            <h4>Morijorch</h4>
+            <h5>Default model text</h5>
+            <p>editors now use Lorem Ipsum as their default model text, and a search for lorem ipsum will uncover many
+              web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a
+              search for lorem ipsum will uncover many web sites still in their infancy. Variouseditors now use Lorem
+              Ipsum as their default model text, and a search for lorem ipsum will uncover many web sites still in
+              their infancy. Various</p>
+          </div>
+          <div className="carousel-item text-only">
+            <h4>Rochak</h4>
+            <h5>Default model text</h5>
+            <p>Variouseditors now use Lorem Ipsum as their default model text, and a search for lorem ipsum will
+              uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model
+              text, and a search for lorem ipsum will uncover many web sites still in their infancy. editors now use
+              Lorem Ipsum as their default model text, and a search for lorem ipsum will uncover many web sites still
+              in their infancy.</p>
+          </div>
+        </div>
+        <div className="prevoise-button-main">
+          <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <i className="fa fa-chevron-left pre-log" aria-hidden="true"></i>
+            <span className="visually-hidden ">Previous</span>
+          </button>
+        </div>
+        <div className="next-button-main">
+          <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <i className="fa fa-chevron-right pre-log2" aria-hidden="true"></i>
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      
 
 
 

@@ -5,26 +5,28 @@ import axios from 'axios'
 
 const AdminHome = () => {
 
-    const navigate=useNavigate()
-    const [msg,setMsg]=useState("")
-    const value=JSON.parse(localStorage.getItem('admin_token'));
-    const getName=async()=>{
-        const res=await axios.get("http://localhost:3003/wholewatch/home",{
-            headers:{Authorization: `Bearer ${value}`},
+
+
+    const navigate = useNavigate()
+    const [msg, setMsg] = useState("")
+    const value = JSON.parse(localStorage.getItem('admin_token'));
+    const getName = async () => {
+        const res = await axios.get("http://localhost:3003/wholewatch/home", {
+            headers: { Authorization: `Bearer ${value}` },
         })
         setMsg(res.data.msg)
     }
 
-    useEffect(()=>{
-        getName() 
-    },[])
+    useEffect(() => {
+        getName()
+    }, [])
 
-    const Logout=(e)=>{
+    const Logout = (e) => {
         e.preventDefault();
         const confirmed = window.confirm("Are you sure you want to logout?");
         if (confirmed) {
             localStorage.clear();
-           navigate("/Adminlogin")
+            navigate("/Adminlogin")
         }
     }
 
@@ -90,17 +92,74 @@ const AdminHome = () => {
                     </div>
                 </div>
             </nav>
-         
+
 
             <div className="header-left">
-        <Link to='/Adminlogin' className='back-btn'>Back</Link>
-      </div>
+                <Link to='/Adminlogin' className='back-btn'>Back</Link>
+            </div>
 
 
 
             <div className="display-username">
-             <span><i className="fa fa-user" aria-hidden="true"></i>{msg}<button onClick={Logout}><i className="fa fa-sign-out" aria-hidden="true"></i></button></span>
-        </div>
+                <span><i className="fa fa-user" aria-hidden="true"></i>{msg}<button onClick={Logout}><i className="fa fa-sign-out" aria-hidden="true"></i></button></span>
+            </div>
+
+
+            <div className='mainm'>
+
+
+                <div className='bordertop'>
+                    <div className='bordertop2'>
+                        <img src="#" alt="" />
+                    </div>
+                </div>
+                <div className='main1'>
+                    <div className='borderleft'>
+
+
+
+                        <div className='catogories'>
+                            Catogories
+                        </div>
+
+                        <div className='catogoryname'>
+                            <div>
+
+                            </div></div>
+
+
+
+
+
+                    </div>
+                    <div className='main1content'>
+                        <div className='main1content2'>
+
+                            <Link to={'/Category'} className='link3'>
+                                <div className='cardsm'>
+                                    <div className='catogory'></div>
+                                    <div>add  category</div>
+                                </div>
+                            </Link>
+                            <Link to={'/products'} className='link3'>
+                                <div className='cardsm'>
+                                    <div className='products'></div>
+                                    <div>add  products</div>
+                                </div>
+                            </Link>
+
+                        </div>
+                        <div className='main1contentborder1 '>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
 
 
 

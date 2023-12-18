@@ -1,4 +1,5 @@
 import admin_schema from './admin.model.js'
+import category_schema from './category.model.js'
 import bcrypt from 'bcrypt'
 import jsonwebtoken from 'jsonwebtoken'
 import pkg from "jsonwebtoken";
@@ -31,6 +32,21 @@ export async function AddAdmin(req,res){
     
     }
     
+}
+export async function AddCategory(req, res) {
+  try {
+    const { category_name, Description } = req.body;
+    console.log(category_name, Description);
+    if (!(category_name && Description)) {
+      return res.status(400).send("Fields are empty");
+    }
+    const task=await category_schema.create({ category_name, Description });
+
+    res.status(200).send(task);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 }
 
 
@@ -104,4 +120,6 @@ export async function forgotUsername(req,res){
   console.log(task);
   res.status(200).send(task)
 }
+
+
 

@@ -4,7 +4,8 @@ import Index from './Components/Body/Index'
 import Adminlogin from './Components/Admin/Adminlogin/Adminlogin'
 import Adminregister from './Components/Admin/Adminregister/Adminregister'
 import Adminfrgpwd from './Components/Admin/AdminFgtPwd/Adminfrgpwd'
-import AdminHome from './Components/Admin/AdminHome/AdminHome'
+import AdminHome from './Components/Admin/AdminHome/Adminhome'
+import Category from './Components/Admin/Category/Category'
 
 function App() {
  
@@ -19,6 +20,7 @@ function App() {
       <Route path='/Adminhome' Component={AdminHome}/>
       <Route path='/Adminregister' Component={Adminregister}/>
       <Route path='/Adminfrgpwd' Component={Adminfrgpwd}/>
+      <Route path='/Category' Component={Category}/>
 
       </Routes>
       
