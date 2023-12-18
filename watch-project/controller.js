@@ -122,4 +122,11 @@ export async function forgotUsername(req,res){
 }
 
 
+export async function Category_getdata(req,res){
+  let task=await category_schema.find()
+      res.status(200).send(task)
+  
+
+}
+
 

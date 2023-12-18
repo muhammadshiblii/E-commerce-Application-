@@ -33,6 +33,22 @@ const AdminHome = () => {
 
 
 
+    const [getEmp,setEmp]=useState([])
+    const getEmployee=async()=>{
+        const res=await axios.get("http://localhost:3003/wholewatch/categorygetdata")
+        setEmp(res.data)
+        }
+    
+        useEffect(()=>{
+            getEmployee()
+        })
+
+
+
+
+
+
+
 
 
 
@@ -94,15 +110,16 @@ const AdminHome = () => {
             </nav>
 
 
-            <div className="header-left">
-                <Link to='/Adminlogin' className='back-btn'>Back</Link>
-            </div>
-
+         
 
 
             <div className="display-username">
                 <span><i className="fa fa-user" aria-hidden="true"></i>{msg}<button onClick={Logout}><i className="fa fa-sign-out" aria-hidden="true"></i></button></span>
             </div>
+            <div className="header-left">
+                <Link to='/Adminlogin' className='back-btn'>BACK</Link>
+            </div>
+
 
 
             <div className='mainm'>
@@ -116,16 +133,26 @@ const AdminHome = () => {
                 <div className='main1'>
                     <div className='borderleft'>
 
+                      
+
+                      
+                         <div className='catogories'>
+                         Catogories
+                     </div>
 
 
-                        <div className='catogories'>
-                            Catogories
-                        </div>
+                
+               
+                    { getEmp.map((data,index)=>
+                     <div key={index} className='catogoryname'>
+                         <div>
+                         {data.category_name}
+                                
+                         </div></div>
+                     )
+                      }
 
-                        <div className='catogoryname'>
-                            <div>
-
-                            </div></div>
+                       
 
 
 
