@@ -91,7 +91,7 @@
 }
 .main1content{
     width: 80%;
-    background-color:rgb(235, 235, 235);
+    background-color:rgb(207, 230, 231);
     height: 100vh;
     padding: 15px;
 }
@@ -169,14 +169,6 @@ justify-content: space-between;
     margin-left: 30px;
 }
 
-
-/* .bordertop{
-    border-bottom: 1px solid rgb(243, 241, 241);
-    height:50px;
-    width: 100vw;
-    
-
-} */
 .bordertop2{
     border-right: 1px solid rgb(243, 241, 241);
     height: 50px;
@@ -196,12 +188,15 @@ justify-content: space-between;
     min-width: 100px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(105, 104, 104, 0.15) 0px 0px 0px 1px;
 }
+
+/* ////main  */
 .main1content{
     width: 80%;
-    background-color:rgb(235, 235, 235);
+    background-color:rgba(216, 235, 237, 0.768);
     height: 100vh;
     padding: 15px;
 }
+
 .main1{
 display: flex;
 justify-content: space-between;
@@ -436,4 +431,12 @@ justify-content: space-between;
 .bottomline {
     border-bottom: 1px solid rgba(0, 0, 0, 0.347);
     padding-top: 1%;
+}
+
+.admin-home-btn-user button{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.Linker-Admin{
+    color: #131212;
 }

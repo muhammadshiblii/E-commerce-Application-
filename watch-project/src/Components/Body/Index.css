@@ -1,20 +1,60 @@
 .main-ind{
-    background-color: rgba(9, 9, 9, 0.937);
-    height: 83px;
+    background-color:black;
+    height: 35px;
     width: 100%;
 }
 .log-phone-ind{
     color: white;
     font-size: 13px;
-    margin-left: 2%;
-    margin-top: 20px;
+    margin-left: 8%;
+    margin-top: 6px;
+}
+.text-sub-ind {
+    margin-top: 2px;
 }
 
-.text-sub-ind{
+.text-sub-ind p::before {
+    content: "FREE WATCH  WORTH ₹1,950 ON ₹4,000 SHOP";
+    animation: animate infinite 3s;
+    background-color: black;
+    padding: 7px 180px;
+    border-radius: 40px;
     color: white;
+    font-family: ano-bold_regular, Helvetica, Arial, sans-serif;
     font-size: 10px;
     text-align: center;
-    margin-left: 10%;
+}
+@keyframes animate {
+
+    0% {
+        content: " USE ON YOUR FIRST ORDER ON RS. 1200. OFF";
+    }
+
+    50% {
+        content: "FREE WATCHES  WORTH ₹3,340 ON ₹2,560 OFF";
+    }
+
+    75% {
+        content: "BLACK SHADE  WORTH ₹1,950 ON ₹4,430 OFF";
+    }
+    100% {
+        content: "WHITE WATCH  WORTH ₹1,950 ON ₹4,430 OFF";
+    }
+}
+#ind-num{
+    margin-left: 9px;
+}
+#log-ind-l{
+    margin-left: 10px;
+}
+#color-nav-ind:hover{
+    color: red;
+}
+#color-nav-ind{
+    color: rgb(229, 64, 64);
+}
+#color-nav-ind2:hover{
+   color: rgb(225, 7, 7);
 }
 .main-sub-ind{
     display: flex;
@@ -24,7 +64,7 @@
     color: white;
     font-size: 13px;
     margin-right: 2%;
-    margin-top: 20px;
+    margin-top: 6px;
 }
 /* ////// black ////// */
 
@@ -48,9 +88,9 @@
 
 }
 .navbar-id-color{
-    background-color: #dedddd;
-    border-top: 0.3px solid #1e1e1e;
-    background: -webkit-linear-gradient(to right, #fffdfd, #fffdfe);
+    background-color: #fff5f5;
+    border-top: 0.3px solid #cbc9c9c3;
+    background: -webkit-linear-gradient(to right, #fffbfb, #fffdfe);
 	background: linear-gradient(to right, #ffffff, #f6f5f5);
     margin-top: 10px;
      
@@ -70,7 +110,7 @@
 }
 .banner{
     background-image:linear-gradient(rgba(36, 34, 34, 0.283),rgba(39, 38, 38, 0)), url("../../../public/F_F_-_Gold.webp");
-    height: 80vh;
+    height: 79vh;
     background-size: cover;
     margin-top: 20px;
 
@@ -111,17 +151,10 @@
 
 }
 .main-ind-brown{
-    background-color:#0e0d0d;
-    height: 133px;
+    background-color:#131111;
+    height: 23px;
     width: 100%;
   
-
-}
-.data-brown-ind{
-    color: white;
-    font-size: 21px;
-    text-align: center;
-    
 
 }
 #holi{
@@ -135,61 +168,13 @@
     color: white;
     font-size: 17px;
 }
-/* caro  section  */
-.text-only p {
-    margin-top: 5px;
-}
-
-.text-only h4 {
-    font-weight: 600;
-    color: #262424;
-}
-
-.text-only h5 {
-    margin-bottom: 5px;
-    color: #bfc0c0;
-    font-weight: normal;
-    font-size: 15px;
-}
-
-/* icons section  */
-.pre-log {
-    color: #ffffff;
-    background-color: #121010;
-    padding: 50px 10px;
-}
-
-.pre-log2 {
-    color: #ffffff;
-    background-color: #0a0a0a;
-    padding: 50px 10px;
-}
-
-.next-button-main i {
-    margin-left: 120%;
-}
-
-.prevoise-button-main i {
-    margin-right: 120%;
-}
-
-/* caro-main  */
-.caro-width {
-    width: 80%;
-    margin-left: 10%;
-    border: 1px solid transparent;
-    padding: 15px 80px;
-    box-shadow: -3px -1px 23px -8px rgb(0, 0, 0, 75);
-    margin-top: 4%;
-
-}
 
 
 /* footer  */
 .footer-main {
    
-    background: linear-gradient( #08080b, #3a3838, #2b2a2a);
-    height: 350px;
+    background: linear-gradient( #08080b, #141313, #1f1d1d);
+    height: 360px;
     margin-top: 20px;
     color: #ffffff;
 
@@ -264,7 +249,7 @@
     outline: none;
     border: none;
     color: #ffffff;
-    background: #0c02046b;
+    background: #326bbcbc;
 }
 
 .footer-second a:hover {
@@ -340,6 +325,109 @@
 .last-footer-para a:hover{
     color: #cbc9c9;
 }
+
+/* ////// categories */
+.ind-6images-full-section{
+    text-align: center;
+    font-size: 36px;
+    font-family: sans-serif;
+    font-weight: 300;
+    margin-top: 10%;
+
+}
+.ind-classic{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.ind-1st-image img{
+    margin-left: 10%;
+    border-radius: 9px;
+    width: 80%;
+     
+}
+.ind-1st-image img:hover{
+    width: 81%;
+    transition: .2s;
+    cursor: pointer;
+
+}
+/* ////////About */
+.About-tissot-ind{
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+}
+.About-tissot-ind-contents{
+    width: 50%;
+   
+}
+.About-tissot-ind-contents h5{
+    margin-top: 20%;
+    margin-left: 10%;
+    font-size: 38px;
+    font-weight: 460;
+    font-family: sans-serif;
+}
+#para-tissot{
+    margin-left: 10%;
+    width: 80%;
+    font-size: 19.5px;
+    font-weight: 300;
+    margin-top: 20px;
+    color: #1e1e1e;
+}
+#para-btn{
+    background-color: rgb(125, 19, 19);
+    padding: 5px 90px;
+    border: 1px solid rgb(91, 15, 15);
+    margin-left: 12%;
+    margin-top: 1%;
+    border-radius: 20px;
+    color: white;
+    
+}
+#para-btn:hover{
+    background-color: rgb(10, 9, 9);
+    border: 1px solid rgb(15, 15, 15);
+    transition: .4s;
+
+}
+.About-tissot-ind-img img{
+    width: 600px;
+    margin-top: 15%;
+    border-radius: 9px;
+}
+/* //////bannner ///// */
+.banner-ind-tissot{
+    background-image: url("/Banner-Tissot.avif");
+    height: 400px;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 10px;
+    margin-top: 10%;
+    background-size: cover;
+
+}
+#banner-para-tissot{
+    color: white;
+    font-size: 45px;
+    margin-left: 7%;
+    padding-top: 9%;
+
+}
+#para-btn-discover{
+    background-color: rgb(222, 17, 17);
+    padding: 10px 100px;
+    border: 1px solid rgb(91, 15, 15);
+    margin-left: 12%;
+    margin-top: 1%;
+    border-radius: 20px;
+    color: white;
+
+}
+
 
 
 

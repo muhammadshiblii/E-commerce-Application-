@@ -6,6 +6,7 @@ import { MdDelete } from "react-icons/md";
 import { HiSquaresPlus } from "react-icons/hi2";
 import { BsAppIndicator } from "react-icons/bs";
 import { FaEdit } from "react-icons/fa";
+import { TbLogout2 } from "react-icons/tb";
 
 const AdminHome = () => {
 
@@ -141,7 +142,7 @@ const AdminHome = () => {
            <div className="backandlogout">
            <div className="display-username">
                 <span className='admin-home-btn-user'>Logout    
-                    <button onClick={Logout}><i className="fa fa-arrow-left" aria-hidden="true"></i></button></span>
+                    <button onClick={Logout}><TbLogout2 className='home-log-admi'/></button></span>
             </div>
             <div className="header-left">
                 <Link to='/Adminlogin' className='back-btn'>BACK</Link>
@@ -182,7 +183,7 @@ const AdminHome = () => {
                                     <MdDelete />
                                 </div>
                                 <div className='edit-btn'>
-                                    <Link to={`/editcategory/${data._id}`}>
+                                    <Link to={`/editcategory/${data._id}`} className='Linker-Admin'>
                                     
                                     <FaEdit />
 

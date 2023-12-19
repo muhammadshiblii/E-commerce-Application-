@@ -41,7 +41,7 @@ const EditCategory = () => {
       }else{
           setTimeout(()=>{
               navigate("/adminhome");
-          },3000);
+          },1000);
       }
     }
   return (

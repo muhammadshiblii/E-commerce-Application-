@@ -10,17 +10,15 @@ const Index = () => {
         <div className="main-sub-ind">
 
           <div className="log-phone-ind">
-            <span><i className="fa fa-phone" aria-hidden="true"></i></span> <span>0055561517</span>
+            <span><i className="fa fa-phone" aria-hidden="true"></i></span> <span id='ind-num'>222-5561517</span>
           </div>
 
           <div className="text-sub-ind">
-            <p>Free Shipping, Ship in 24 hours</p>
-            <p>10% off for our new users, use code-TimelessStyle10</p>
-            <p>NO COST EMI AVAILABLE ON ORDER ABOVE RS.10,000</p>
+            <p></p>
           </div>
 
           <div className="log-cart-ind">
-            <span><i className="fa fa-shopping-cart" aria-hidden="true"></i></span> <span>CART O <Link to={'/Adminlogin'} id='Linkkkkss'><span>LOGIN</span></Link>  OR REGISTER</span>
+            <span><i className="fa fa-shopping-cart" aria-hidden="true"></i></span> <span>CART<Link to={'/Adminlogin'} id='Linkkkkss'><span id='log-ind-l'>LOGIN</span></Link>  OR REGISTER</span>
           </div>
 
         </div>
@@ -41,29 +39,29 @@ const Index = () => {
             <div className="collapse navbar-collapse nav-main-ind" id="navbarNav">
 
               <div>
-                <a className="nav-link active" aria-current="page" href="#" id="change-section"><span>HOME</span></a>
+                <a className="nav-link active" aria-current="page" href="#" id="change-section"><span id='color-nav-ind'>HOME</span></a>
               </div>
               <div>
-                <a className="nav-link active" href="#"><span>BRANDS</span></a>
+                <a className="nav-link active" href="#"><span id='color-nav-ind2'>BRANDS</span></a>
               </div>
               <div>
-                <a className="nav-link active" href="#"><span>MEN</span></a>
+                <a className="nav-link active" href="#"><span id='color-nav-ind2'>MEN</span></a>
               </div>
               <div>
-                <a className="nav-link active" href="#"><span>WOMEN</span></a>
+                <a className="nav-link active" href="#"><span id='color-nav-ind2'>WOMEN</span></a>
               </div>
               <div>
-                <a className="nav-link active" href="#"><span>JEWELRY</span></a>
+                <a className="nav-link active" href="#"><span id='color-nav-ind2'>JEWELRY</span></a>
               </div>
 
 
               <div>
-              <div><a className="nav-link active" href="#"><span>LUXURY</span></a></div>
+                <div><a className="nav-link active" href="#"><span id='color-nav-ind2'>LUXURY</span></a></div>
               </div>
 
 
 
-              <div><a className="nav-link active" href="#"><span>OFFERS</span></a></div>
+              <div><a className="nav-link active" href="#"><span id='color-nav-ind2'>OFFERS</span></a></div>
 
               <form className="d-flex" role="search">
                 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search " />
@@ -85,12 +83,12 @@ const Index = () => {
       </div>
 
       <div className="banner">
-    
+
 
         <div className="mainbtn">
           <div className="buttons-full-data">
             <a href="" >Shop now</a>
-           
+
           </div>
         </div>
 
@@ -98,61 +96,74 @@ const Index = () => {
 
       </div>
       <div className="main-ind-brown">
-       <div className="data-brown-ind">
-       <p id='holi'>Holiday Gift Guide</p>
-            <p id='EMI'>Discover the perfect gifts for the holiday season with our holiday gift guide</p>
-            <a href="#">Explore Now !</a>
-       </div>
+
+      </div>
+      <div className='whole-data-and-img-sect'>
+        <div className="ind-6images-full-section"><span>OUR CATEGORIES</span></div>
+        <div className="ind-classic">
+          <div className="ind-1st-image">
+            <img src="/Cat-1-ind.avif" alt="" />
+          </div>
+
+          <div className="ind-1st-image">
+            <img src="/Cat-2-ind.avif" alt="" />
+          </div>
+
+          <div className="ind-1st-image">
+            <img src="/Cat-3-ind.avif" alt="" />
+          </div>
+
+
+          <div className="ind-1st-image">
+            <img src="/Cat-4-ind.avif" alt="" />
+          </div>
+
+          <div className="ind-1st-image">
+            <img src="/Cat-5-ind.avif" alt="" />
+          </div>
+
+          <div className="ind-1st-image">
+            <img src="/Cat-6-ind.avif" alt="" />
+          </div>
+
+        </div>
+
+      </div>
+      <div className="banner-ind-tissot">
+
+        <p id='banner-para-tissot'>PRX POWERMATIC 80 35MM</p>
+        <button id='para-btn-discover'>Register</button>
+        
+      </div>
+
+      <div className="About-tissot-ind">
+        <div className="About-tissot-ind-contents">
+          <h5>REGISTER MY WATCH</h5>
+          <p id='para-tissot'>You can now register your Tissot watches into your Tissot account. Sign up, add your watch to your collection and enjoy the full Tissot Experience. Want to personalize your watch with a compatible strap? Want to know about your warranty status? Want to know how to get the most of your watch thanks to your user guide? Want to access your past order and personal information? All you need is accessible in your account.</p>
+          <button id='para-btn'>Register</button>
+        </div>
+        <div className="About-tissot-ind-img">
+          <img src="/Tissot-about.webp" alt="" />
+        </div>
 
       </div>
 
+      <div className="About-tissot-ind">
+        <div className="About-tissot-ind-contents">
+          <h5>NBA</h5>
+          <p id='para-tissot'>Of the four major American sports, basketball is the most followed, loved, practiced and inspiring of all. Countless children and adults play hoops, wear the clothes and dream about dunking across the globe. A major global brand, Tissot has been the official Timekeeper of the NBA since 2015. Following up on its commitment to ambassadors such as the 18-season NBA veteran Tony Parker or Golden State Warriors Klay Thompson, Tissot deeply believes in the positive team values of the 5 on 5 game, and in its universal appeal.</p>
+        </div>
+        <div className="About-tissot-ind-img">
+          <img src="/NBA-TIssot.webp" alt="" />
+        </div>
 
-      {/* <!-- caro-section  --> */}
-      <div id="carouselExampleControls" className="carousel slide caro-width" data-bs-ride="carousel">
-        <div className="carousel-inner">
-          <div className="carousel-item active text-only">
-            <h4>Brad Johns</h4>
-            <h5>Default model text</h5>
-            <p>Variouseditors now use Lorem Ipsum as their default model text, and a search for lorem ipsum will
-              uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model
-              text, and a search for lorem ipsum will uncover many web sites still in their infancy. editors now use
-              Lorem Ipsum as their default model text, and a search for lorem ipsum will uncover many web sites still
-              in their infancy.</p>
-          </div>
-          <div className="carousel-item text-only">
-            <h4>Morijorch</h4>
-            <h5>Default model text</h5>
-            <p>editors now use Lorem Ipsum as their default model text, and a search for lorem ipsum will uncover many
-              web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a
-              search for lorem ipsum will uncover many web sites still in their infancy. Variouseditors now use Lorem
-              Ipsum as their default model text, and a search for lorem ipsum will uncover many web sites still in
-              their infancy. Various</p>
-          </div>
-          <div className="carousel-item text-only">
-            <h4>Rochak</h4>
-            <h5>Default model text</h5>
-            <p>Variouseditors now use Lorem Ipsum as their default model text, and a search for lorem ipsum will
-              uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model
-              text, and a search for lorem ipsum will uncover many web sites still in their infancy. editors now use
-              Lorem Ipsum as their default model text, and a search for lorem ipsum will uncover many web sites still
-              in their infancy.</p>
-          </div>
-        </div>
-        <div className="prevoise-button-main">
-          <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev">
-            <i className="fa fa-chevron-left pre-log" aria-hidden="true"></i>
-            <span className="visually-hidden ">Previous</span>
-          </button>
-        </div>
-        <div className="next-button-main">
-          <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="next">
-            <i className="fa fa-chevron-right pre-log2" aria-hidden="true"></i>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div>
       </div>
+
+      
+
+
+
+
 
 
       <div className="footer-main">
@@ -194,7 +205,7 @@ const Index = () => {
         </div>
 
       </div>
-      
+
 
 
 

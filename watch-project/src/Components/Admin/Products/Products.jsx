@@ -10,7 +10,7 @@ const Products = () => {
 	<div className="main-product">
   <div className="wrapper" >
 			<div className="inner">
-				<form action="">
+				<form action="" className='data-products'>
 					<h3>Registration Form</h3>
 					<div className="form-group">
 						<div className="form-wrapper">
