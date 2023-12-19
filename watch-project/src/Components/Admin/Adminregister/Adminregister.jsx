@@ -91,7 +91,7 @@ const Adminregister = () => {
             <Link to={"/Adminlogin"}><button className='signin'>Register</button></Link> 
           </div>
           <div className="overlay-panel overlay-right">
-            <h1 className='headingg'>Hello, Friend!</h1>
+            <h1 className='headingg'>Hello,User!</h1>
             <p className='para'>Do you have an alredy Account</p>
            
             <Link  to={"/Adminlogin"}> <button className="ghost" id="signUp">lOGIN !</button></Link>

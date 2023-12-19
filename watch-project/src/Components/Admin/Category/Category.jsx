@@ -62,9 +62,7 @@ const Category = () => {
                     <div className="overlay-container">
                         <div className="overlay-cat">
                             <div className="overlay-panel overlay-right">
-                                <h1 className='headingg'>Chooose Categories</h1>
-                                <p className='para'>Add With Us !!! t</p>
-                                <Link to={"#"}><button className="ghost" id="signUp">EXplore Now !!</button></Link>
+                  
                             </div>
                         </div>
                     </div>

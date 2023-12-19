@@ -132,7 +132,7 @@ const Index = () => {
       <div className="banner-ind-tissot">
 
         <p id='banner-para-tissot'>PRX POWERMATIC 80 35MM</p>
-        <button id='para-btn-discover'>Register</button>
+        <button id='para-btn-discover'>Discover</button>
         
       </div>
 

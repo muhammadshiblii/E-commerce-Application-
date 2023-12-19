@@ -71,7 +71,7 @@ if(res.status!==404){
       <div className="overlay-container">
         <div className="overlay">
           <div className="overlay-panel overlay-right">
-            <h1 className='headingg'>Hello, Friend!</h1>
+            <h1 className='headingg'>Welcome, Admin!</h1>
             <p className='para'>Dont Have any Account</p>
             
             <Link to={"/Adminregister"}><button className="ghost" id="signUp">Register Now</button></Link>
