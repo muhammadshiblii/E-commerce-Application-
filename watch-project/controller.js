@@ -108,12 +108,19 @@ export async function forgotUsername(req,res){
 }
 
  ////// Category
+
+
+ 
+
 export async function Category_getdata(req,res){
   let task=await category_schema.find()
       res.status(200).send(task)
   
 
 }
+
+
+
 
 export async function AddCategory(req, res) {
   try {
@@ -131,6 +138,8 @@ export async function AddCategory(req, res) {
   }
 }
 
+
+
 export function deleteCategory(req,res)
 {
     const{id}=req.params;
@@ -142,3 +151,26 @@ export function deleteCategory(req,res)
     })
 }
 
+
+
+
+export async function editCategorydetails(req, res) {
+  const { id } = req.params;
+  try {
+      const updatedData = req.body;
+      const value = await category_schema.updateOne({ _id: id }, { $set: updatedData });
+      res.status(200).send(value);
+  } catch (error) {
+      res.status(404).send(error);
+  }
+}
+
+
+
+export async function getcategoryfulldata(req,res){
+  const{id}=req.params;
+  console.log(id);
+  let task=await category_schema.findOne({_id:id})
+  console.log(task);
+  res.status(200).send(task)
+}

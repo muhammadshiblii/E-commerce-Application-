@@ -10,5 +10,7 @@ router.route("/getemail/:username").get(controller.forgotUsername);
 router.route("/adminpassword").patch(controller.forgotAdminpwd);
 router.route("/categorygetdata").get(controller.Category_getdata);
 router.route("/deletecategory/:id").delete(controller.deleteCategory);
+router.route("/getcategorydetails/:id").post(controller.getcategoryfulldata);
+router.route("/editcategorydetails/:id").patch(controller.editCategorydetails);
 
 export default router;
