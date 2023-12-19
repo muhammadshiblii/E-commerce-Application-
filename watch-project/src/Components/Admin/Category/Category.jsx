@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import './Category.css'
 
 const Category = () => {
     const navigate = useNavigate()
@@ -45,7 +46,7 @@ const Category = () => {
                     </div>
                     <div className="form-container sign-in-container">
                         <form action="#" className='forms' onSubmit={AddCat}  >
-                            <h1 className='headingg'> Category </h1>
+                            <h1 className='headingg'>Category </h1>
                             <div className="social-container">
                                 <a href="#" className="social"><i className="fa fa-facebook"></i></a>
                                 <a href="#" className="social"><i className="fa fa-google"></i></a>
@@ -55,13 +56,13 @@ const Category = () => {
                             <input type="text" placeholder="Category Name" name='category_name'  onChange={GetData}  />
                             <input type="text" placeholder="Description" name="Description"  onChange={GetData}  />
                             <Link className='social' to={'#'}>Various Category !!</Link>
-                            <button className='signin'>Submit</button>
+                            <button className='signin-cat'>Submit</button>
                         </form>
                     </div>
                     <div className="overlay-container">
-                        <div className="overlay">
+                        <div className="overlay-cat">
                             <div className="overlay-panel overlay-right">
-                                <h1 className='headingg'>Hello, Admin!</h1>
+                                <h1 className='headingg'>Chooose Categories</h1>
                                 <p className='para'>Add With Us !!! t</p>
                                 <Link to={"#"}><button className="ghost" id="signUp">EXplore Now !!</button></Link>
                             </div>

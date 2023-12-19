@@ -5,6 +5,7 @@ import axios from 'axios'
 import { MdDelete } from "react-icons/md";
 import { HiSquaresPlus } from "react-icons/hi2";
 import { BsAppIndicator } from "react-icons/bs";
+import { FaEdit } from "react-icons/fa";
 
 const AdminHome = () => {
 
@@ -95,64 +96,57 @@ const AdminHome = () => {
 
     return (
         <div>
+      <div className="navitem">
+                <div className="maclogo">
+                    <img src='../../../../public/BACK.avif' alt="" />
 
-            <nav className="navbar navbar-expand-lg navbar-light ">
-                <div className="container-fluid">
-                    <div className="nav-gifts">GIFTOS</div>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse nav-main" id="navbarNav">
-
-                        <div>
-                            <a className="nav-link active" aria-current="page" href="#" id="change-section"><span>HOME</span></a>
-                        </div>
-                        <div>
-                            <a className="nav-link active" href="#"><span>SHOP</span></a>
-                        </div>
-                        <div>
-                            <a className="nav-link active" href="#"><span>WHY US</span></a>
-                        </div>
-                        <div>
-                            <a className="nav-link active" href="#"><span>BRANDS</span></a>
-                        </div>
-                        <div>
-                            <a className="nav-link active" href="#"><span>CONTACT US</span></a>
-                        </div>
-
-
-                        <div>
-                            <a className="nav-link active" href="#"><span><i className="fa fa-user" aria-hidden="true"></i></span></a>
-                        </div>
-
-
-
-                        <div><a className="nav-link active" href="#"><span>LOGIN</span></a></div>
-
-                        <div><a className="nav-link active" href="#"><span><i className="fa fa-shopping-bag"
-                            aria-hidden="true"></i></span></a></div>
-
-
-                        <div> <a className="nav-link active" href="#"><span><i className="fa fa-search" aria-hidden="true"></i></span></a>
-                        </div>
-
-
-                    </div>
                 </div>
-            </nav>
+                <div className="centernav">
+                    <h4></h4>
+                </div>
+
+                <div className="serachbox" >
+                    <h1><i className="fa fa-user" aria-hidden="true"><span>{msg}</span></i></h1>
+
+                </div>
 
 
 
 
 
-            <div className="display-username">
-                <span className='admin-home-btn-user'><i className="fa fa-user" aria-hidden="true"></i>{msg}
-                <button onClick={Logout}><i className="fa fa-sign-out logggggg" aria-hidden="true"></i></button></span>
+            </div>
+
+
+
+            <div className="itemlist">
+                <div className="item11">NEW! COUPLE WATCHES ORDER NOW </div>
+                <div className="item1">BEST-SELLERS</div>
+                <div className="item1">NEW</div>
+                <div className="item1">MEN</div>
+                <div className="item1">WOMEN</div>
+                <div className="item1">BEAUTY</div>
+                <div className="item1">HOME & LIVING</div>
+                <div className="item1">OFFER</div>
+                <div className="item1">EXPLORE</div>
+            </div>
+
+
+            <div className="bottomline">
+
+            </div>
+
+
+
+
+           <div className="backandlogout">
+           <div className="display-username">
+                <span className='admin-home-btn-user'>Logout    
+                    <button onClick={Logout}><i className="fa fa-arrow-left" aria-hidden="true"></i></button></span>
             </div>
             <div className="header-left">
                 <Link to='/Adminlogin' className='back-btn'>BACK</Link>
             </div>
+           </div>
 
 
 
@@ -186,6 +180,9 @@ const AdminHome = () => {
 
                                 <div onClick={() => deleteCategory(data._id)} className='delete-btn'>
                                     <MdDelete />
+                                </div>
+                                <div onClick={() => deleteCategory(data._id)} className='edit-btn'>
+                                <FaEdit />
                                 </div>
 
                             </div>
