@@ -165,7 +165,7 @@ const AdminHome = () => {
 
 
                         <div className='catogories'>
-                            Catogories
+                        Categoryes
                         </div>
 
 
@@ -181,8 +181,12 @@ const AdminHome = () => {
                                 <div onClick={() => deleteCategory(data._id)} className='delete-btn'>
                                     <MdDelete />
                                 </div>
-                                <div onClick={() => deleteCategory(data._id)} className='edit-btn'>
-                                <FaEdit />
+                                <div className='edit-btn'>
+                                    <Link to={`/editcategory/${data._id}`}>
+                                    
+                                    <FaEdit />
+
+                                    </Link>
                                 </div>
 
                             </div>

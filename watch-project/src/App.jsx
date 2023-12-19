@@ -7,6 +7,7 @@ import Adminfrgpwd from './Components/Admin/AdminFgtPwd/Adminfrgpwd'
 import AdminHome from './Components/Admin/AdminHome/Adminhome'
 import Category from './Components/Admin/Category/Category'
 import Products from './Components/Admin/Products/Products'
+import EditCategory from './Components/Admin/Editcategory/EditCategory'
 
 function App() {
  
@@ -23,6 +24,7 @@ function App() {
       <Route path='/Adminfrgpwd' Component={Adminfrgpwd}/>
       <Route path='/Category' Component={Category}/>
       <Route path='/products' Component={Products}/>
+      <Route path='/editcategory/:id' Component={EditCategory}/>
 
       </Routes>
       
