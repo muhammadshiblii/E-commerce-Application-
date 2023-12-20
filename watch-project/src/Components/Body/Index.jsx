@@ -86,18 +86,70 @@ const Index = () => {
 
 
         <div className="mainbtn">
-          <div className="buttons-full-data">
-            <a href="" >Shop now</a>
 
-          </div>
+       
+             
+
+
+
+
+
         </div>
 
 
 
       </div>
+
+
+      
       <div className="main-ind-brown">
 
       </div>
+
+
+      <div id="carouselExampleInterval" className="carousel slide caroooo" data-bs-ride="carousel">
+
+        <div className="carousel-inner">
+          <div className="carousel-item active" data-bs-interval="10000">
+            <div className="carosel-img">
+              <img src="/Carousel-img-1.avif" className="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <div className="carousel-item" data-bs-interval="2000">
+            <div className="carosel1-img">
+              <img src="/carosel-img-2.avif" className="d-block w-100" alt="..." />
+            </div>
+          </div>
+
+
+          <div className="carousel-item">
+            <div className="carosel1-img">
+              <img src="/carousel-img-3.webp" className="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <div className="carousel-item">
+            <div className="carosel-img">
+              <img src="/carousel-img-4.webp" className="d-block w-100" alt="..." />
+            </div>
+
+          </div>
+        </div>
+        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+
+
+      </div>
+
+
+
+
+
       <div className='whole-data-and-img-sect'>
         <div className="ind-6images-full-section"><span>OUR CATEGORIES</span></div>
         <div className="ind-classic">
@@ -147,6 +199,7 @@ const Index = () => {
         </div>
 
       </div>
+
 
       <div className="About-tissot-ind">
         <div className="About-tissot-ind-contents">

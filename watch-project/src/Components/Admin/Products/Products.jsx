@@ -26,6 +26,10 @@ const Products = () => {
 						<label htmlFor="">Price</label>
 						<input type="text" className="form-control" />
 					</div>
+					{/* <div className="form-wrapper">
+						<label htmlFor="">Number of Stoke</label>
+						<input type="password" className="form-control" />
+					</div> */}
           
 					<div className="form-wrapper">
 						<label htmlFor="">Number of Stoke</label>
@@ -35,6 +39,7 @@ const Products = () => {
 						<label htmlFor="">Add Photo</label>
 						<input type="file" id='pphoto' className="form-control" />
 					</div>
+					
 					<div className="checkbox">
 						<label>
 							<input type="checkbox" /> I caccept the Terms of Use & Privacy Policy.
