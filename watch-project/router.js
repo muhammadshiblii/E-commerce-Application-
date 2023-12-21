@@ -1,6 +1,7 @@
 import { Router } from "express";
 import * as controller from "./controller.js"
 import Auth from './Auth.js'
+import multer from "multer";
 const router=Router();
 router.route("/addadmin").post(controller.AddAdmin);
 router.route("/addcategory").post(controller.AddCategory);
@@ -12,5 +13,16 @@ router.route("/categorygetdata").get(controller.Category_getdata);
 router.route("/deletecategory/:id").delete(controller.deleteCategory);
 router.route("/getcategorydetails/:id").post(controller.getcategoryfulldata);
 router.route("/editcategorydetails/:id").patch(controller.editCategorydetails);
+
+
+const storage = multer.diskStorage({
+    destination: "./images",
+    filename: (req, file, cb) => {
+        cb(null, file.originalname);
+    },
+});
+const upload = multer({ storage: storage });
+router.route('/addProduct').post(upload.array( 'images'), controller.AddProducts);
+router.route("/image/:filename").get(controller.SetPath)
 
 export default router;

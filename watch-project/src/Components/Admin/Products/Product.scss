@@ -38,6 +38,21 @@
       align-items: center; 
       background-image: url('../../../../public/bg-registration-form-2.jpg');
     }
+    .form-wrappers-select select{
+      padding: 9px 80px;
+      margin-left: 20px;
+      border-radius: 20px;
+      color: #000;
+      border: none;
+      background-color: #ffffffd5;
+
+    }
+    .form-wrappers-select{
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: #000;
+    }
+  
     #pphoto{
       padding-top: 9px;
     }
@@ -75,7 +90,9 @@
           margin-right: 20px; }
     
     .form-wrapper {
-      margin-bottom: 17px; }
+      margin-bottom: 17px; 
+      font-size: 18px;
+    }
       .form-wrapper label {
         margin-bottom: 9px;
         display: block; }
