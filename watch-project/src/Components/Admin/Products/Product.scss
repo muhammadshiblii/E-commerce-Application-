@@ -42,15 +42,18 @@
       padding: 9px 80px;
       margin-left: 20px;
       border-radius: 20px;
-      color: #000;
+      color: #535252;
       border: none;
       background-color: #ffffffd5;
+      margin-top: 20px;
+      font-weight: 100;
 
     }
     .form-wrappers-select{
       margin-bottom: 20px;
       font-size: 18px;
-      color: #000;
+      color: #333;
+      font-weight: 100;
     }
   
     #pphoto{
@@ -60,12 +63,11 @@
     .inner {
       min-width: 850px;
       margin: auto;
-      padding-top: 68px;
-    
-      padding-bottom: 48px;
+      padding-top: 38px;
+      padding-bottom: 38px;
       background: url("../../../../public/pexels-alex-andrews-861449.jpg");
       background-size: cover;
-      border: 1px solid rgba(103, 102, 102, 0.464);
+      border: 1px solid rgba(139, 139, 139, 0.464);
      }
       .inner h3 {
         text-transform: uppercase;
