@@ -1,14 +1,16 @@
-.main-ind{
-    background-color:rgba(0, 0, 0, 0.942);
+.main-ind {
+    background-color: rgba(0, 0, 0, 0.942);
     height: 45px;
     width: 100%;
 }
-.log-phone-ind{
+
+.log-phone-ind {
     color: white;
     font-size: 13px;
     margin-left: 8%;
     margin-top: 12px;
 }
+
 .text-sub-ind {
     margin-top: 8px;
     /* font-size: 21px; */
@@ -25,6 +27,7 @@
     font-size: 14px;
     text-align: center;
 }
+
 @keyframes animate {
 
     0% {
@@ -38,69 +41,84 @@
     75% {
         content: "BLACK SHADE  WORTH ₹1,950 ON ₹4,430 OFF";
     }
+
     100% {
         content: "WHITE WATCH  WORTH ₹1,950 ON ₹4,430 OFF";
     }
 }
-#ind-num{
+
+#ind-num {
     margin-left: 9px;
 }
-#log-ind-l{
+
+#log-ind-l {
     margin-left: 10px;
 }
-#color-nav-ind:hover{
+
+#color-nav-ind:hover {
     color: red;
 }
-#color-nav-ind{
+
+#color-nav-ind {
     color: rgb(229, 64, 64);
 }
-#color-nav-ind2:hover{
-   color: rgb(225, 7, 7);
+
+#color-nav-ind2:hover {
+    color: rgb(225, 7, 7);
 }
-.main-sub-ind{
+
+.main-sub-ind {
     display: flex;
     justify-content: space-evenly;
 }
-.log-cart-ind{
+
+.log-cart-ind {
     color: white;
     font-size: 13px;
     margin-right: 2%;
     margin-top: 12px;
 }
+
 /* ////// black ////// */
 
 
 /* img */
-.center-ind{
+.center-ind {
     display: flex;
     justify-content: center;
 }
+
 /* //////nav ////// */
 .nav-main-ind {
     display: flex;
     justify-content: center;
     gap: 70px;
     padding: 10px;
-  
+
+
 }
+
 .nav-main-ind a span {
     color: rgb(0, 0, 0);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
-.navbar-id-color{
+
+.navbar-id-color {
     background-color: #fff5f5;
     border-top: 0.3px solid #e9e7e7c3;
     background: -webkit-linear-gradient(to right, #fffbfb, #fffdfe);
-	background: linear-gradient(to right, #ffffff, #f6f5f5);
+    background: linear-gradient(to right, #ffffff, #f6f5f5);
     margin-top: 10px;
-     
+
 }
-.HOME-IND{
+
+.HOME-IND {
     color: #1e1e1e;
     margin-left: 10%;
     margin-top: 20px;
 }
+
 .banner h2 {
     text-align: center;
     padding-top: 10%;
@@ -109,16 +127,19 @@
     letter-spacing: 3px;
     margin-bottom: 20px;
 }
-.banner{
-    background-image:linear-gradient(rgba(36, 34, 34, 0.283),rgba(39, 38, 38, 0)), url("../../../public/main-banner-new-ashvy.avif");
+
+.banner {
+    background-image: linear-gradient(rgba(36, 34, 34, 0.283), rgba(39, 38, 38, 0)), url("../../../public/main-banner-new-ashvy.avif");
     height: 79vh;
     background-size: cover;
     margin-top: 20px;
 
 }
-.caroooo{
+
+.caroooo {
     margin-top: 20px;
 }
+
 .buttons-full-data a:hover {
     padding: 10px 32px;
     color: rgb(255, 255, 255);
@@ -129,6 +150,7 @@
 
 
 }
+
 .buttons-full-data a {
     padding: 10px 32px;
     color: white;
@@ -138,37 +160,44 @@
 
 
 }
-#Linkkkkss{
+
+#Linkkkkss {
     color: white;
     text-decoration: none;
     margin-left: 20px;
 }
-.buttons-full-data{
+
+.buttons-full-data {
     margin-top: 24%;
-    margin-right:18%;
+    margin-right: 18%;
 
 }
+
 .mainbtn {
     text-align: center;
     padding-top: 3%;
 
 
 }
-.main-ind-brown{
-    background-color:#131111;
+
+.main-ind-brown {
+    background-color: #131111;
     height: 23px;
     width: 100%;
-  
+
 
 }
-#holi{
+
+#holi {
     font-weight: 600;
 
 }
-#EMI{
+
+#EMI {
     font-size: 18px;
 }
-.data-brown-ind a{
+
+.data-brown-ind a {
     color: white;
     font-size: 17px;
 }
@@ -176,8 +205,8 @@
 
 /* footer  */
 .footer-main {
-   
-    background: linear-gradient( #08080b, #141313, #1f1d1d);
+
+    background: linear-gradient(#08080b, #141313, #1f1d1d);
     height: 360px;
     margin-top: 20px;
     color: #ffffff;
@@ -307,31 +336,36 @@
 .footer-four-for-margin i {
     margin-top: 14px;
 }
+
 /* just footer-border  */
-.foooter-just-border{
+.foooter-just-border {
     border-bottom: 1px solid #cbc9c9;
     width: 66%;
     margin-left: 15%;
     margin-top: 15px;
 }
-.last-footer-para{
+
+.last-footer-para {
     text-align: center;
     margin-top: 20px;
 }
-.last-footer-para p{
+
+.last-footer-para p {
     color: #cbc9c9;
 }
-.last-footer-para a{
+
+.last-footer-para a {
     text-decoration: none;
     color: #cbc9c9;
 
 }
-.last-footer-para a:hover{
+
+.last-footer-para a:hover {
     color: #cbc9c9;
 }
 
 /* ////// categories */
-.ind-6images-full-section{
+.ind-6images-full-section {
     text-align: center;
     font-size: 36px;
     font-family: sans-serif;
@@ -339,43 +373,49 @@
     margin-top: 10%;
 
 }
-.ind-classic{
+
+.ind-classic {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
 }
 
-.ind-1st-image img{
+.ind-1st-image img {
     margin-left: 10%;
     border-radius: 9px;
     width: 80%;
-     
+
 }
-.ind-1st-image img:hover{
+
+.ind-1st-image img:hover {
 
     transform: scale(1.07);
     transition: .2s;
     cursor: pointer;
 
 }
+
 /* ////////About */
-.About-tissot-ind{
+.About-tissot-ind {
     display: flex;
     justify-content: space-between;
     width: 98%;
 }
-.About-tissot-ind-contents{
+
+.About-tissot-ind-contents {
     width: 50%;
-   
+
 }
-.About-tissot-ind-contents h5{
+
+.About-tissot-ind-contents h5 {
     margin-top: 20%;
     margin-left: 10%;
     font-size: 38px;
     font-weight: 460;
     font-family: sans-serif;
 }
-#para-tissot{
+
+#para-tissot {
     margin-left: 10%;
     width: 80%;
     font-size: 19.5px;
@@ -384,7 +424,8 @@
     color: #1e1e1e;
     text-align: justify;
 }
-#para-btn{
+
+#para-btn {
     background-color: rgb(125, 19, 19);
     padding: 5px 90px;
     border: 1px solid rgb(91, 15, 15);
@@ -392,21 +433,24 @@
     margin-top: 1%;
     border-radius: 20px;
     color: white;
-    
+
 }
-#para-btn:hover{
+
+#para-btn:hover {
     background-color: rgb(10, 9, 9);
     border: 1px solid rgb(15, 15, 15);
     transition: .4s;
 
 }
-.About-tissot-ind-img img{
+
+.About-tissot-ind-img img {
     width: 600px;
     margin-top: 15%;
     border-radius: 9px;
 }
+
 /* //////bannner ///// */
-.banner-ind-tissot{
+.banner-ind-tissot {
     background-image: url("/Banner-Tissot.avif");
     height: 400px;
     width: 90%;
@@ -416,14 +460,16 @@
     background-size: cover;
 
 }
-#banner-para-tissot{
+
+#banner-para-tissot {
     color: white;
     font-size: 45px;
     margin-left: 7%;
     padding-top: 9%;
 
 }
-#para-btn-discover{
+
+#para-btn-discover {
     background-color: rgb(222, 17, 17);
     padding: 10px 100px;
     border: 1px solid rgb(91, 15, 15);
@@ -433,11 +479,385 @@
     color: white;
 
 }
-#para-btn-discover:hover{
+
+#para-btn-discover:hover {
     background-color: rgb(123, 17, 17);
 
 }
 
 
+@media (min-width:330px) and (max-width:575.98px) {
 
 
+    .main-ind {
+        background-color: rgba(0, 0, 0, 0.942);
+        height: auto;
+        width: 230%;
+    }
+
+    .main-sub-ind {
+        display: flex;
+        justify-content: center;
+    }
+
+    .log-phone-ind {
+        color: white;
+        font-size: 13px;
+        margin-left: 2%;
+        margin-top: 12px;
+    }
+
+    .text-sub-ind {
+        margin-top: 8px;
+        /* font-size: 21px; */
+    }
+
+    .center-ind img {
+        margin-left: 320px;
+    }
+
+    .text-sub-ind p::before {
+        content: "FREE WATCH  WORTH ₹1,950 ON ₹4,000 SHOP";
+        animation: animate infinite 3s;
+        background-color: black;
+        padding: 7px 190px;
+        border-radius: 40px;
+        color: white;
+        font-family: ano-bold_regular, Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    #ind-num {
+        margin-left: 9px;
+    }
+
+    #log-ind-l {
+        margin-left: 10px;
+    }
+
+    .nav-main-ind {
+        display: none;
+        justify-content: center;
+        gap: 70px;
+        padding: 0px;
+
+
+    }
+
+    .HOME-IND {
+        display: none;
+    }
+
+    .banner h2 {
+        text-align: center;
+        padding-top: 10%;
+        color: white;
+        font-size: 50px;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+    }
+
+    .banner {
+        background-image: linear-gradient(rgba(36, 34, 34, 0.283), rgba(39, 38, 38, 0)), url("../../../public/main-banner-new-ashvy.avif");
+        height: 100vh;
+        background-size: cover;
+        margin-top: 20px;
+        width: 230vw;
+
+    }
+
+    .main-ind-brown {
+        display: none;
+
+
+    }
+
+    .caroooo {
+        margin-top: 20px;
+
+    }
+
+    .caro-part {
+        width: 200%;
+        margin-left: 14%;
+    }
+
+    /* ////// categories */
+    .ind-6images-full-section span {
+        text-align: center;
+        font-size: 36px;
+        font-family: sans-serif;
+        font-weight: 300;
+        margin-top: 10%;
+        /* margin-left: 00%; */
+        padding-left: 90%;
+
+    }
+
+    .ind-classic {
+        display: inline;
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .ind-1st-image img {
+        margin-left: 70%;
+        border-radius: 9px;
+        width: 100%;
+
+    }
+
+    /* //////bannner ///// */
+    .banner-ind-tissot {
+        background-image: url("/Banner-Tissot.avif");
+        height: 400px;
+        width: 200%;
+        margin-left: 13%;
+        border-radius: 10px;
+        margin-top: 10%;
+        background-size: cover;
+
+    }
+
+    /* ////////About */
+    .About-tissot-ind {
+        display: inline;
+      
+    }
+
+    .About-tissot-ind-contents {
+        width: 100%;
+        margin-left: 60%;
+
+    }
+
+    .About-tissot-ind-contents h5 {
+        margin-top: 20%;
+        margin-left: 10%;
+        font-size: 38px;
+        font-weight: 460;
+        font-family: sans-serif;
+    }
+
+    #para-tissot {
+        margin-left: 10%;
+        width: 80%;
+        font-size: 19.5px;
+        font-weight: 300;
+        margin-top: 20px;
+        color: #1e1e1e;
+        text-align: justify;
+    }
+
+    #para-btn {
+        background-color: rgb(125, 19, 19);
+        padding: 5px 90px;
+        border: 1px solid rgb(91, 15, 15);
+        margin-left: 12%;
+        margin-top: 1%;
+        border-radius: 20px;
+        color: white;
+
+    }
+
+    #para-btn:hover {
+        background-color: rgb(10, 9, 9);
+        border: 1px solid rgb(15, 15, 15);
+        transition: .4s;
+
+    }
+
+    .About-tissot-ind-img img {
+        width: 700px;
+        margin-top: 15%;
+        border-radius: 9px;
+        margin-left: 20%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* foooter ////// */
+
+    /* footer  */
+    .footer-main {
+        height: auto;
+        margin-top: 6%;
+        width: 180%;
+        margin-left: 30%;
+
+    }
+
+    .footer-icons-main {
+        text-align: center;
+     
+
+    }
+
+    .footer-icons-main i {
+        margin-top: 30%;
+        font-size: 27px;
+        margin-bottom: 30px;
+    }
+
+    .footer-flex-main-contents {
+        display: inline;
+        width: 90%;
+        gap: 20px;
+        margin-top: 5%;
+    }
+
+    /* footer full first  */
+    .footer-first {
+        margin-top: 2%;
+        width: 95%;
+        /* margin-left: 8%; */
+    }
+
+    .footer-first h3 {
+        font-weight: bold;
+        font-size: 19px;
+        margin-bottom: 25px;
+        margin-left: 27%;
+    }
+
+    .footer-first p {
+        color: #cbc9c9;
+        /* text-align: center; */
+        margin-left: 7%;
+
+    }
+
+    /* foooter full second  */
+    .footer-second {
+        margin-top: 2%;
+        width: 95%;
+        margin-left: 2%;
+    }
+
+    .footer-second h3 {
+        font-weight: bold;
+        font-size: 19px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .footer-second input {
+        width: 100%;
+        padding: 7px 10px;
+        margin-bottom: 17px;
+    }
+
+    .footer-second input::placeholder {
+        font-size: bold;
+        font-weight: 400;
+    }
+
+    .footer-second a {
+        text-decoration: none;
+        padding: 8px 40px;
+        margin-left: 20%;
+    }
+
+    /* footer full third  */
+    .footer-third {
+        margin-top: 2%;
+        width: 95%;
+    }
+
+    .footer-third h3 {
+        font-weight: bold;
+        font-size: 19px;
+        margin-bottom: 25px;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .footer-third p {
+        color: #cbc9c9;
+        text-align: center;
+
+    }
+
+    /* footer full-fourth  */
+    .footer-four {
+        width: 95%;
+        /* margin-left: 10%;
+    margin-top: 2%; */
+        text-align: center;
+
+    }
+
+    .footer-four h3 {
+        font-weight: bold;
+        font-size: 19px;
+        margin-bottom: 25px;
+
+    }
+
+    .footer-four a {
+        color: #cbc9c9;
+        text-decoration: none;
+        margin-left: 5px;
+    }
+
+    .footer-four a:hover {
+        color: #ffffff;
+    }
+
+    .footer-four-for-margin i {
+        margin-top: 14px;
+    }
+
+    /* just footer-border  */
+    .foooter-just-border {
+        border-bottom: 1px solid #cbc9c9;
+        width: 66%;
+        margin-left: 15%;
+        margin-top: 15px;
+    }
+
+    .last-footer-para {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .last-footer-para p {
+        color: #cbc9c9;
+    }
+
+    .last-footer-para a {
+        text-decoration: none;
+        color: #cbc9c9;
+
+    }
+
+    .last-footer-para a:hover {
+        color: #cbc9c9;
+    }
+
+
+
+
+
+
+
+
+
+
+}

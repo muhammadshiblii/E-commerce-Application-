@@ -109,7 +109,7 @@ const Index = () => {
 
       <div id="carouselExampleInterval" className="carousel slide caroooo" data-bs-ride="carousel">
 
-        <div className="carousel-inner">
+        <div className="carousel-inner caro-part">
           <div className="carousel-item active" data-bs-interval="10000">
             <div className="carosel-img">
               <img src="/Carousel-img-1.avif" className="d-block w-100" alt="..." />
@@ -151,7 +151,7 @@ const Index = () => {
 
 
       <div className='whole-data-and-img-sect'>
-        <div className="ind-6images-full-section"><span>OUR CATEGORIES</span></div>
+        <div className="ind-6images-full-section"><span>CATEGORIES</span></div>
         <div className="ind-classic">
           <div className="ind-1st-image">
             <img src="/Cat-1-ind.avif" alt="" />
