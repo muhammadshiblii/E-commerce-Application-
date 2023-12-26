@@ -1,6 +1,7 @@
 import admin_schema from './admin.model.js'
 import category_schema from './category.model.js'
 import product_schema from './product.model.js'
+import customer_schema from './customer.model.js'
 import bcrypt from 'bcrypt'
 import jsonwebtoken from 'jsonwebtoken'
 import path from 'path'
@@ -198,4 +199,58 @@ export async function SetPath(req,res)
   let { filename } = req.params;
   console.log(filename);
   return res.sendFile(path.resolve(`./images/${filename}`))
+}
+
+///////Customer
+export async function AddCustomer(req, res) {
+  try {
+    const { password, ...custDetails } = req.body;
+    
+    if (!custDetails) {
+      return res.status(404).send("Fields are empty");
+    }
+
+    const hashedPwd = await bcrypt.hash(password, 10);
+
+    customer_schema.create({ ...custDetails, password: hashedPwd });
+
+    res.status(201).send("Successfully registered");
+  } catch (error) {
+    console.error(error);
+    res.status(500).send(error);
+  }
+}
+
+export async function customerHome(req,res)
+{
+  try {
+    
+     const{name}=req.user;
+    res.status(200).send({msg:`${name}`})
+   } 
+   catch (error) {
+    res.status(404).send(error)
+  }
+}
+
+export async function CustomerLogin(req, res) {
+  try {
+   console.log(req.body);
+   const { email, password } = req.body;
+   const usr = await customer_schema.findOne({ email })
+   console.log(usr);
+   if (usr === null) return res.status(404).send("email or password doesnot exist");
+   const success =await bcrypt.compare(password, usr.password)
+   console.log(success);
+   const {name}=usr
+   if (success !== true) return res.status(404).send("email or password doesnot exist");
+   const token = await sign({ name }, process.env.JWT_KEY, { expiresIn: "24h" })
+   console.log(name);
+   console.log(token);
+   res.status(200).send({ msg: "successfullly login", token })
+  //  res.end();
+   
+  } catch (error) {
+   console.log(error);
+}
 }

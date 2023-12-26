@@ -13,6 +13,9 @@ router.route("/categorygetdata").get(controller.Category_getdata);
 router.route("/deletecategory/:id").delete(controller.deleteCategory);
 router.route("/getcategorydetails/:id").post(controller.getcategoryfulldata);
 router.route("/editcategorydetails/:id").patch(controller.editCategorydetails);
+router.route("/addCustomer").post(controller.AddCustomer);
+router.route("/customerLogin").post(controller.CustomerLogin);
+router.route("/CustHome").get(Auth,controller.customerHome);
 
 
 const storage = multer.diskStorage({

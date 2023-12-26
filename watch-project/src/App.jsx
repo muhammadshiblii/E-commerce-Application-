@@ -8,6 +8,8 @@ import AdminHome from './Components/Admin/AdminHome/Adminhome'
 import Category from './Components/Admin/Category/Category'
 import Products from './Components/Admin/Products/Products'
 import EditCategory from './Components/Admin/Editcategory/EditCategory'
+import CustomerReg from './Components/Customer/CustomerReg/CustomerReg'
+import Customerlogin from './Components/Customer/CustomerLogin/Customerlogin'
 
 function App() {
  
@@ -25,6 +27,9 @@ function App() {
       <Route path='/Category' Component={Category}/>
       <Route path='/products' Component={Products}/>
       <Route path='/editcategory/:id' Component={EditCategory}/>
+      <Route path='/CustomerReg' Component={CustomerReg}/>
+      <Route path='/CustomerLogin' Component={Customerlogin}/>
+
 
       </Routes>
       
