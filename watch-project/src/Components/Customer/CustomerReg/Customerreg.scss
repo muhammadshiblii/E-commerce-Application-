@@ -1,6 +1,13 @@
 .CustomerReg-main{
     .CustRegMain{
       display: flex;
+      .backBtn{
+        color: black;
+        text-decoration: none;
+        margin-left: 2%;
+        margin-top: 4%;
+        font-size: 24px;
+    }
     }
     .CustRegRight{
       width: 60%;
