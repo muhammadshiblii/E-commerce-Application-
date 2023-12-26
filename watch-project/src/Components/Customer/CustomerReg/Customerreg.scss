@@ -1,6 +1,7 @@
 .CustomerReg-main{
     .CustRegMain{
       display: flex;
+      margin-bottom: 20px;
       .backBtn{
         color: black;
         text-decoration: none;
@@ -46,10 +47,7 @@
         border: none;
         
       }
-      .iHaveAccount{
-        // color: black;
-        font-size: 13px;
-      }
+    
       .resgiter-btn{
         width: 90px;
         height: 40px;
@@ -65,5 +63,16 @@
         margin: auto;
         text-align: right;
       }
+    }
+    .iHaveAccount{
+     
+      font-size: 14px;
+      border: 1px solid rgb(181, 7, 61);
+      background-color: rgb(226, 22, 35);
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      padding:  4px 100px;
+      margin-bottom: 20px;
+      border-radius: 14px;
     }
     }
