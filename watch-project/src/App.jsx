@@ -10,6 +10,9 @@ import Products from './Components/Admin/Products/Products'
 import EditCategory from './Components/Admin/Editcategory/EditCategory'
 import CustomerReg from './Components/Customer/CustomerReg/CustomerReg'
 import Customerlogin from './Components/Customer/CustomerLogin/Customerlogin'
+import Viewproductcts from './Components/Admin/ViewProducts/Viewproductcts'
+import ProductFulldetails from './Components/Admin/ProductFulldetails/ProductFulldetails'
+import Editproduct from './Components/Admin/Editproduct/Editproduct'
 
 function App() {
  
@@ -29,6 +32,9 @@ function App() {
       <Route path='/editcategory/:id' Component={EditCategory}/>
       <Route path='/CustomerReg' Component={CustomerReg}/>
       <Route path='/CustomerLogin' Component={Customerlogin}/>
+      <Route path='/Viewproducts/:category_name' Component={Viewproductcts}/>
+      <Route path='/productfulldetails/:id' Component={ProductFulldetails}/>
+      <Route path='/editproducts/:id' Component={Editproduct}/>
 
 
       </Routes>

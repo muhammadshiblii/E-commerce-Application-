@@ -17,8 +17,12 @@ router.route("/addCustomer").post(controller.AddCustomer);
 router.route("/customerLogin").post(controller.CustomerLogin);
 router.route("/CustHome").get(Auth,controller.customerHome);
 
+///////// Products
+router.route("/editproducts/:id").patch(controller.editProdect);
 router.route("/addProduct").post(controller.AddProducts);
-
+router.route("/getCatWiseProducts/:category_name").get(controller.getCategoryWisedProduct);
+router.route("/getProduct/:id").get(controller.getProduct);
+router.route("/deleteproduct/:id").delete(controller.deleteProduct);
 
 // const storage = multer.diskStorage({
 //     destination: "./images",

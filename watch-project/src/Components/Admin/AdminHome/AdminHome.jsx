@@ -174,10 +174,14 @@ const AdminHome = () => {
 
                         {getEmp.map((data, index) =>
                             <div key={index} className='catogoryname'>
+
+                              <Link to={`/Viewproducts/${data.category_name}`} className='catogoryname2'>
+
                                 <div className='categorynames-only'>
                                     {data.category_name}
 
                                 </div>
+                                </Link>
 
                                 <div onClick={() => deleteCategory(data._id)} className='delete-btn'>
                                     <MdDelete />

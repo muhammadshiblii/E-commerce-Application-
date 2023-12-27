@@ -145,12 +145,23 @@ justify-content: space-between;
     height: 40px;
     background-color:aliceblue;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     display: flex;
-    font-size: 15px;
+    font-size: 14px;
     align-items: center;
     padding-left: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
+    letter-spacing: 1px;
+    gap: 22px;
+}
+.catogoryname2{
+    width: 67%;
+    color: black;
+    text-decoration:none ;
+
+}
+.catogoryname2:hover{
+    color: black;
 }
 .categorynames-only{
     width: 55%;

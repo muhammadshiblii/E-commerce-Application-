@@ -179,27 +179,6 @@ export async function getcategoryfulldata(req,res){
 }
 
 
- /////// Addd category /////
-//  export async function AddProducts(req, res) {
-//   try {
-//     const images=req.files;
-//     console.log(images);
-//     const { productname,category_name,Description,price,stokes} = req.body;
-//     const task=await product_schema.create({productname,category_name,Description,price,stokes,images});
-//     console.log(task);
-//     res.status(200).send({result : task});
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).send("Internal Server Error");
-//   }
-// }
-// export async function SetPath(req,res)
-// {
-//   let { filename } = req.params;
-//   console.log(filename);
-//   return res.sendFile(path.resolve(`./images/${filename}`))
-// }
-
 export async function AddProducts(req, res) {
   try {
     // console.log(req.files);
@@ -212,6 +191,38 @@ export async function AddProducts(req, res) {
   } catch (error) {
     console.error(error);
     res.status(500).send("Internal Server Error");
+  }
+}
+
+
+export async function getProduct(req,res){
+  const { id }=req.params;
+  console.log(id);
+  let task=await product_schema.findOne({ _id:id })
+  console.log(task);
+  res.status(200).send(task)
+}
+
+
+export function deleteProduct(req,res)
+{
+    const{id}=req.params;
+    const data= product_schema.deleteOne({_id:id})
+    data.then((resp)=>{
+        res.status(200).send(resp)
+    }).catch((error)=>{
+        res.status(404).send(error)
+    })
+}
+
+export async function editProdect(req, res) {
+  const { id } = req.params;
+  try {
+      const updatedData = req.body;
+      const value = await product_schema.updateOne({ _id: id }, { $set: updatedData });
+      res.status(200).send(value);
+  } catch (error) {
+      res.status(404).send(error);
   }
 }
 
@@ -277,4 +288,15 @@ export async function CustomerLogin(req, res) {
   } catch (error) {
    console.log(error);
 }
+}
+///// view cate 
+export async function getCategoryWisedProduct(req, res) {
+  try {
+    const { category_name } = req.params;
+    const products = await product_schema.find({ category_name: category_name });
+
+    res.status(200).json(products);
+  } catch (error) {
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
 }
