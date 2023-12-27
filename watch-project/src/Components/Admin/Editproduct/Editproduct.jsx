@@ -66,8 +66,8 @@ const Editproduct = () => {
 
 
 
-    const getProduct = async () => {
-        const res = await axios.get(`http://localhost:3003/wholewatch/getProduct/${id}`)
+    const getProduct=async()=>{
+        const res=await axios.get(`http://localhost:3003/wholewatch/getProduct/${id}`)
         console.log(res.data);
         setVal(res.data)
     }

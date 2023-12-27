@@ -194,7 +194,6 @@ export async function AddProducts(req, res) {
   }
 }
 
-
 export async function getProduct(req,res){
   const { id }=req.params;
   console.log(id);
@@ -202,6 +201,7 @@ export async function getProduct(req,res){
   console.log(task);
   res.status(200).send(task)
 }
+
 
 
 export function deleteProduct(req,res)
