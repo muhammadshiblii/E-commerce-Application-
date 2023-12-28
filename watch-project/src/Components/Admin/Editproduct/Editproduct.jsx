@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import './Editproduct.scss'
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const Editproduct = () => {
+    const {id}=useParams()
     const navigate = useNavigate()
     let Banner = "";
     let Images = "";
