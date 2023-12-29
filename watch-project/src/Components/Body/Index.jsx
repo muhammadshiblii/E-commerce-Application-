@@ -58,6 +58,7 @@ const Index = () => {
         </div>
 
       </div>
+      {/* //////// */}
     
 
       <div className="center-ind">
