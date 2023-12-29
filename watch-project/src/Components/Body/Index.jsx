@@ -58,7 +58,7 @@ const Index = () => {
         </div>
 
       </div>
-      {/* /////// */}
+    
 
       <div className="center-ind">
         <img src="../../../public/BACK.avif" alt="" />
