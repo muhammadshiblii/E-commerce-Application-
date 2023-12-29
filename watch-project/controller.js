@@ -10,7 +10,7 @@ const {sign}=pkg
 
 
 
-
+//////// Admin
 
 export async function AddAdmin(req,res){
     try {
@@ -110,7 +110,7 @@ export async function forgotUsername(req,res){
   res.status(200).send(task)
 }
 
- ////// Category
+ ///// /////Category
 
 
  
@@ -179,6 +179,7 @@ export async function getcategoryfulldata(req,res){
 }
 
 
+//////////// Products
 export async function AddProducts(req, res) {
   try {
     // console.log(req.files);
