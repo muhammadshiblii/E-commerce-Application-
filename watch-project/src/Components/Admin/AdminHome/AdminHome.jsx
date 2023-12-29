@@ -166,7 +166,7 @@ const AdminHome = () => {
 
 
                         <div className='catogories'>
-                        Categoryes
+                        Categories
                         </div>
 
 

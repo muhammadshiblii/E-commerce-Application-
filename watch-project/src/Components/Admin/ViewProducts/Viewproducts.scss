@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: rgba(0, 0, 0, 0.658);
+  background: rgba(130, 128, 128, 0.914);
   gap: 40px;
   
   .card {
@@ -29,9 +29,10 @@
     top: -50%;
     width: 100%;
     height: 100%;
-    background: #ffce00;
+    background: #ffffffe2;
     transform: skewY(345deg);
     transition: 0.5s;
+   
   }
   
 .card:hover::before {
@@ -89,7 +90,7 @@
     margin-top: 15px;
     color: #000000;
     text-decoration: none;
-    background: #ffce00;
+    background:#ffffffe2;
     border-radius: 30px;
     text-transform: uppercase;
     letter-spacing: 1px;
