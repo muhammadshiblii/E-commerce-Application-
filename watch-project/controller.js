@@ -270,9 +270,10 @@ export async function AddCustomer(req, res) {
 export async function customerHome(req,res)
 {
   try {
+    console.log(req.user);
     
-     const{name}=req.user;
-    res.status(200).send({msg:`${name}`})
+     const{name,_id}=req.user;
+    res.status(200).send({msg:`${name}`,id:`${_id}`})
    } 
    catch (error) {
     res.status(404).send(error)

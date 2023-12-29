@@ -43,7 +43,7 @@ const Customerlogin = () => {
                 <div><input type="password" placeholder='password' name='password' onChange={GetData} /></div>
 
                 <div> <button className='resgiter-btn'>Login</button></div>
-                <Link className='iHaveAccount' to='/custemerReg'>New Customer ?</Link>
+                <Link className='iHaveAccount' to='/CustomerReg'>New Customer ?</Link>
 
               </form>
             </div>

@@ -56,13 +56,24 @@
 }
 
 #color-nav-ind:hover {
-    color: red;
+    color: rgb(239, 10, 10);
 }
 
 #color-nav-ind {
-    color: rgb(229, 64, 64);
+    color: rgb(159, 4, 4);
+    margin-left: 10px;
 }
-
+.logout-ind{
+    background-color: #08080be4;
+    color: white;
+    border: none;
+    padding: 1px 12px;
+    border-radius: 6px;
+    margin-left: 10px;
+}
+#sign-ind{
+    color: red;
+}
 #color-nav-ind2:hover {
     color: rgb(225, 7, 7);
 }

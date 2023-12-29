@@ -1,8 +1,42 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Index.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 const Index = () => {
+
+  const [id, setId] = useState("")
+  const naviagate = useNavigate()
+  const [msg, setMsg] = useState("")
+  const value = JSON.parse(localStorage.getItem('customer_token'));
+
+  const getName = async () => {
+    const res = await axios.get("http://localhost:3003/wholewatch/CustHome", {
+      headers: { Authorization: `Bearer ${value}` },
+    })
+    console.log(res.data);
+    setMsg(res.data.msg)
+    setId(res.data.id)
+  }
+  useEffect(() => {
+    getName()
+  }, [])
+  console.log(id);
+
+
+  const Logout = () => {
+    const isConfirmed = window.confirm("Are you sure you want to logout?");
+    if (isConfirmed) {
+      localStorage.clear();
+      naviagate("/")
+
+    }
+  };
+
+
+
+
+
   return (
     <div>
 
@@ -18,7 +52,7 @@ const Index = () => {
           </div>
 
           <div className="log-cart-ind">
-            <span><i className="fa fa-shopping-cart" aria-hidden="true"></i></span> <span>CART<Link to={'/CustomerReg'} id='Linkkkkss'><span id='log-ind-l'>LOGIN</span></Link>  OR REGISTER</span>
+            <span></span> <span>CART<Link to={'/CustomerReg'} id='Linkkkkss'><span id='log-ind-l'>LOGIN</span></Link>  OR REGISTER</span>
           </div>
 
         </div>
@@ -39,10 +73,17 @@ const Index = () => {
             <div className="collapse navbar-collapse nav-main-ind" id="navbarNav">
 
               <div>
-                <a className="nav-link active" aria-current="page" href="#" id="change-section"><span id='color-nav-ind'>HOME</span></a>
+                {/* <a className="nav-link active" aria-current="page" href="#" id="change-section"><span id='color-nav-ind'>HOME</span></a> */}
               </div>
               <div>
-                <a className="nav-link active" href="#"><span id='color-nav-ind2'>BRANDS</span></a>
+                {msg ? (
+                  <>
+                    <Link className="nav-link mx-2 text-uppercase active" to='/CustomerLogin' id="sign-ind"><i className="fa fa-user" aria-hidden="true"></i>   {msg}  <button className='logout-ind' onClick={Logout}>Logout</button></Link>
+
+                  </>
+                ) : (
+                  <Link className="nav-link mx-2 text-uppercase active" to='/CustomerLogin' id="sign-ind">Sign in</Link>
+                )}
               </div>
               <div>
                 <a className="nav-link active" href="#"><span id='color-nav-ind2'>MEN</span></a>
@@ -87,8 +128,8 @@ const Index = () => {
 
         <div className="mainbtn">
 
-       
-             
+
+
 
 
 
@@ -101,7 +142,7 @@ const Index = () => {
       </div>
 
 
-      
+
       <div className="main-ind-brown">
 
       </div>
@@ -185,7 +226,7 @@ const Index = () => {
 
         <p id='banner-para-tissot'>PRX POWERMATIC 80 35MM</p>
         <button id='para-btn-discover'>Discover</button>
-        
+
       </div>
 
       <div className="About-tissot-ind">
@@ -212,7 +253,7 @@ const Index = () => {
 
       </div>
 
-      
+
 
 
 
