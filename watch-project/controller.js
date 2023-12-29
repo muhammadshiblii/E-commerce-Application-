@@ -179,6 +179,20 @@ export async function getcategoryfulldata(req,res){
 }
 
 
+
+///// view cate 
+export async function getCategoryWisedProduct(req, res) {
+  try {
+    const { category_name } = req.params;
+    const products = await product_schema.find({ category_name: category_name });
+
+    res.status(200).json(products);
+  } catch (error) {
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+}
+
+
 //////////// Products
 export async function AddProducts(req, res) {
   try {
@@ -226,10 +240,6 @@ export async function editProdect(req, res) {
       res.status(404).send(error);
   }
 }
-
-
-
-
 
 
 
@@ -289,15 +299,4 @@ export async function CustomerLogin(req, res) {
   } catch (error) {
    console.log(error);
 }
-}
-///// view cate 
-export async function getCategoryWisedProduct(req, res) {
-  try {
-    const { category_name } = req.params;
-    const products = await product_schema.find({ category_name: category_name });
-
-    res.status(200).json(products);
-  } catch (error) {
-    res.status(500).json({ error: 'Internal Server Error' });
-  }
 }
