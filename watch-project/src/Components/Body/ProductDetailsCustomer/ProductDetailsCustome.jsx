@@ -67,7 +67,7 @@ const ProductDetailsCustome = () => {
 
 
 
-              <Link className='link5' to={`/Viewproducts/${getProducts.category_name}`} >Back to </Link></div>
+              <Link className='link5' to={`/`} >Back to </Link></div>
 
 
 
