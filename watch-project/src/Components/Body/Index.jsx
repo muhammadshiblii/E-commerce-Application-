@@ -33,6 +33,19 @@ const Index = () => {
     }
   };
 
+  const [getProducts, setProducts] = useState([])
+
+  // http://localhost:7000/sportstrack/getAllProducts
+  const getAllProducts = async () => {
+    const res = await axios.get("http://localhost:3003/wholewatch/getAllProducts")
+    // console.log(res.data);
+    setProducts(res.data)
+    console.log(getProducts);
+  }
+  useEffect(() => {
+    getAllProducts()
+  }, [])
+
 
 
 
@@ -58,8 +71,8 @@ const Index = () => {
         </div>
 
       </div>
-  
-    
+
+
 
       <div className="center-ind">
         <img src="../../../public/BACK.avif" alt="" />
@@ -77,7 +90,7 @@ const Index = () => {
               <div>
                 <a className="nav-link active" aria-current="page" href="#" id="change-section"><span id='color-nav-ind'>HOME</span></a>
               </div>
-            
+
               <div>
                 <a className="nav-link active" href="#"><span id='color-nav-ind2'>MEN</span></a>
               </div>
@@ -114,18 +127,18 @@ const Index = () => {
 
       <div className="HOME-IND">
         <span>HOME @ Collections &   Guess Collections </span>
-          <div className='home-ind-2'>
-                {msg ? (
-                  <>
-                    <Link className="nav-link mx-2 text-uppercase active" to='/CustomerLogin' id="sign-ind"><i className="fa fa-user" aria-hidden="true"></i>   {msg}  <button className='logout-ind' onClick={Logout}>Logout</button></Link>
+        <div className='home-ind-2'>
+          {msg ? (
+            <>
+              <Link className="nav-link mx-2 text-uppercase active" to='/CustomerLogin' id="sign-ind"><i className="fa fa-user" aria-hidden="true"></i>   {msg}  <button className='logout-ind' onClick={Logout}>Logout</button></Link>
 
-                  </>
-                ) : (
-                  <Link className="nav-link mx-2 text-uppercase active" to='/CustomerLogin' id="sign-ind">Sign in</Link>
-                )}
-              </div>
+            </>
+          ) : (
+            <Link className="nav-link mx-2 text-uppercase active" to='/CustomerLogin' id="sign-ind">Sign in</Link>
+          )}
+        </div>
       </div>
-      
+
 
       <div className="banner">
 
@@ -197,31 +210,90 @@ const Index = () => {
 
       <div className='whole-data-and-img-sect'>
         <div className="ind-6images-full-section"><span>CATEGORIES</span></div>
+        <div className="ind-6images-full-section-2"><span>Heritage Watches</span></div>
+
         <div className="ind-classic">
-          <div className="ind-1st-image">
-            <img src="/Cat-1-ind.avif" alt="" />
-          </div>
+          {
+            getProducts.filter((data) => data.category_name === 'Heritage')
+              .map((data, index) => (
+                <Link key={index} to={`/productDetailsCustomer/${data._id}`} className='Link-view-products-ind'>
+                  <div className="ind-1st-image">
+                    <img src={data.banner} alt="" />
+                  </div>
+                  <div className="prices-ind">
+                    <div><p className='price-ind'>₹ {data.price}</p></div>
+                    <div><strike><p className='og-price'>₹ 79988</p></strike></div>
+                  </div>
 
-          <div className="ind-1st-image">
-            <img src="/Cat-2-ind.avif" alt="" />
-          </div>
+                </Link>
+              ))
+          }
 
-          <div className="ind-1st-image">
-            <img src="/Cat-3-ind.avif" alt="" />
-          </div>
+        </div>
 
 
-          <div className="ind-1st-image">
-            <img src="/Cat-4-ind.avif" alt="" />
-          </div>
 
-          <div className="ind-1st-image">
-            <img src="/Cat-5-ind.avif" alt="" />
-          </div>
+        <div className="ind-6images-full-section-2"><span>Classical Watches</span></div>
 
-          <div className="ind-1st-image">
-            <img src="/Cat-6-ind.avif" alt="" />
-          </div>
+        <div className="ind-classic">
+          {
+            getProducts.filter((data) => data.category_name === 'Classic')
+              .map((data, index) => (
+                <Link key={index} to={`/productDetailsCustomer/${data._id}`} className='Link-view-products-ind'>
+                  <div className="ind-1st-image">
+                    <img src={data.banner} alt="" />
+                  </div>
+                  <div className="prices-ind">
+                    <div><p className='price-ind'>₹ {data.price}</p></div>
+                    <div><strike><p className='og-price'>₹ 99988</p></strike></div>
+                  </div>
+
+                </Link>
+              ))
+          }
+
+        </div>
+
+
+        <div className="ind-6images-full-section-2"><span>Sport Watches</span></div>
+
+        <div className="ind-classic">
+          {
+            getProducts.filter((data) => data.category_name === 'Sport')
+              .map((data, index) => (
+                <Link key={index} to={`/productDetailsCustomer/${data._id}`} className='Link-view-products-ind'>
+                  <div className="ind-1st-image">
+                    <img src={data.banner} alt="" />
+                  </div>
+                  <div className="prices-ind">
+                    <div><p className='price-ind'>₹ {data.price}</p></div>
+                    <div><strike><p className='og-price'>₹ 89988</p></strike></div>
+                  </div>
+
+                </Link>
+              ))
+          }
+
+        </div>
+
+        <div className="ind-6images-full-section-2"><span>Golden Watches</span></div>
+
+        <div className="ind-classic">
+          {
+            getProducts.filter((data) => data.category_name === 'Golden')
+              .map((data, index) => (
+                <Link key={index} to={`/productDetailsCustomer/${data._id}`} className='Link-view-products-ind'>
+                  <div className="ind-1st-image">
+                    <img src={data.banner} alt="" />
+                  </div>
+                  <div className="prices-ind">
+                    <div><p className='price-ind'>₹ {data.price}</p></div>
+                    <div><strike><p className='og-price'>₹ 99988</p></strike></div>
+                  </div>
+
+                </Link>
+              ))
+          }
 
         </div>
 
