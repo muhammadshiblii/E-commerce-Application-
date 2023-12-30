@@ -6,16 +6,17 @@ import { Link, useParams } from 'react-router-dom'
 const ProductDetailsCustome = () => {
   const { id } = useParams()
   const [msg, setMsg,] = useState("")
-  const [setId] = useState("") /////my home name
+  const [setId] = useState("")/////my home name
   const value = JSON.parse(localStorage.getItem('customer_token'));
   const [getProducts, setProduct] = useState({
-    cust_id: "",
-    product_name: "",
-    category: "",
-    description: "",
-    price: "",
-    banner: "",
-    images: []
+    cust_id:"",
+    productname:"",
+    category_name:"",
+    Description:"",
+    price:"",
+    banner:"",
+
+   
   })
   const getProduct = async () => {
     const res = await axios.get(`http://localhost:3003/wholewatch/getProduct/${id}`)
@@ -42,6 +43,27 @@ const ProductDetailsCustome = () => {
     getName()
   }, [])
   console.log(id);
+
+  ////// adding to cart 
+
+  const addToCart = async () => {
+    try {
+
+      console.log("Customer ID:",msg,id);
+      const res = await axios.post("http://localhost:3003/wholewatch/addToCart",{ ...getProducts,cust_id:id});
+     
+      console.log(res.data);
+      if(res){
+        alert("Added To Cart")
+      }else{
+        alert("Error adding product to cart. Please try again.")
+      }
+    } catch (error) {
+        console.error("Error adding product to cart:", error);
+        alert("Error adding product to cart. Please try again.");
+    }
+  };
+
 
 
 
@@ -124,7 +146,7 @@ const ProductDetailsCustome = () => {
               </div>
             </div>
             <div className="btn-cust-add-cart">
-              <div className='Add-cart-cus'><button> Add To Cart <i className="fa fa-shopping-cart" aria-hidden="true"></i> </button> </div>
+              <div className='Add-cart-cus'><button onClick={addToCart}> Add To Cart <i className="fa fa-shopping-cart" aria-hidden="true"></i> </button> </div>
               <div className='Add-cart-cus'><button>Add To Wish <i className="fa fa-picture-o wishhh" aria-hidden="true"></i> </button></div>
             </div>
 

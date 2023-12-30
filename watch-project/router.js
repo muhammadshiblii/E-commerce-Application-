@@ -21,6 +21,7 @@ router.route("/editcategorydetails/:id").patch(controller.editCategorydetails);
 router.route("/addCustomer").post(controller.AddCustomer);
 router.route("/customerLogin").post(controller.CustomerLogin);
 router.route("/CustHome").get(Auth,controller.customerHome);
+router.route("/addToCart").post(controller.AddToCart);
 
 ///////// Products
 router.route("/editproducts/:id").patch(controller.editProdect);

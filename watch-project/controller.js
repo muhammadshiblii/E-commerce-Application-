@@ -2,6 +2,7 @@ import admin_schema from './admin.model.js'
 import category_schema from './category.model.js'
 import product_schema from './product.model.js'
 import customer_schema from './customer.model.js'
+import cart_schema from './cart.model.js'
 import bcrypt from 'bcrypt'
 import jsonwebtoken from 'jsonwebtoken'
 import path from 'path'
@@ -287,22 +288,32 @@ export async function customerHome(req,res)
 
 export async function CustomerLogin(req, res) {
   try {
-   console.log(req.body);
-   const { email, password } = req.body;
-   const usr = await customer_schema.findOne({ email })
-   console.log(usr);
-   if (usr === null) return res.status(404).send("email or password doesnot exist");
-   const success =await bcrypt.compare(password, usr.password)
-   console.log(success);
-   const {name}=usr
-   if (success !== true) return res.status(404).send("email or password doesnot exist");
-   const token = await sign({ name }, process.env.JWT_KEY, { expiresIn: "24h" })
-   console.log(name);
-   console.log(token);
-   res.status(200).send({ msg: "successfullly login", token })
-  //  res.end();
-   
-  } catch (error) {
-   console.log(error);
+    console.log(req.body);
+    const { email, password } = req.body;
+    const usr = await customer_schema.findOne({ email });
+    console.log(usr);
+    if (usr === null) return res.status(404).send("Email or password does not exist");
+    const success = await bcrypt.compare(password, usr.password);
+    console.log(success);
+    if (!success) return res.status(404).send("Email or password does not exist");
+    const { name, _id } = usr;
+    const token = await sign({ name, _id }, process.env.JWT_KEY, { expiresIn: "24h" });
+    res.status(200).send({ msg: "Successfully login", token });
+    } catch (error) {
+    console.log(error);
+    res.status(500).send("Internal Server Error");
+  }
 }
+
+//////cart
+export async function AddToCart(req, res) {
+  try {
+    const { ...productdetails } = req.body;
+    const task = await cart_schema.create({ ...productdetails });
+    console.log(task);
+    res.status(200).send(task);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 }
