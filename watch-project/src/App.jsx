@@ -14,6 +14,9 @@ import Viewproductcts from './Components/Admin/ViewProducts/Viewproductcts'
 import ProductFulldetails from './Components/Admin/ProductFulldetails/ProductFulldetails'
 import Editproduct from './Components/Admin/Editproduct/Editproduct'
 import ProductDetailsCustome from './Components/Body/ProductdetailsCustomer/ProductDetailsCustome'
+import Cartcustomer from './Components/Customer/CartCutomer/Cartcustomer'
+
+
 
 function App() {
  
@@ -37,6 +40,10 @@ function App() {
       <Route path='/productfulldetails/:id' Component={ProductFulldetails}/>
       <Route path='/editproducts/:id' Component={Editproduct}/>
       <Route path='/productDetailsCustomer/:id' Component={ProductDetailsCustome}/>
+      <Route path='/CartCustomer/:id' Component={Cartcustomer}/>
+      
+      
+      
       
 
 

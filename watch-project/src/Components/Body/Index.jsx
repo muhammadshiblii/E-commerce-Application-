@@ -65,7 +65,7 @@ const Index = () => {
           </div>
 
           <div className="log-cart-ind">
-            <span></span> <span>CART<Link to={'/CustomerReg'} id='Linkkkkss'><span id='log-ind-l'>LOGIN</span></Link>  OR REGISTER</span>
+            <span><Link to={`CartCustomer/${id}`}> CART</Link> </span> <span><Link to={'/CustomerReg'} id='Linkkkkss'><span id='log-ind-l'>LOGIN</span></Link>  OR REGISTER</span>
           </div>
 
         </div>

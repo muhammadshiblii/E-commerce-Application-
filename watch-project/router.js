@@ -30,6 +30,9 @@ router.route("/getCatWiseProducts/:category_name").get(controller.getCategoryWis
 router.route("/getProduct/:id").get(controller.getProduct);
 router.route("/deleteproduct/:id").delete(controller.deleteProduct);
 router.route("/getAllProducts").get(controller.getAllProducts);
+router.route("/getCartProduct/:id").get(controller.getCartProduct);
+router.route("/delAlltProduct/:id").delete(controller.deleteAllProducts);
+router.route("/delCartProduct/:id").delete(controller.delCartProduct);
 
 
 

@@ -6,7 +6,7 @@ import { Link, useParams } from 'react-router-dom'
 const ProductDetailsCustome = () => {
   const { id } = useParams()
   const [msg, setMsg,] = useState("")
-  const [setId] = useState("")/////my home name
+  const [Id,SetId] = useState("")/////my home name
   const value = JSON.parse(localStorage.getItem('customer_token'));
   const [getProducts, setProduct] = useState({
     cust_id:"",
@@ -37,7 +37,7 @@ const ProductDetailsCustome = () => {
     })
     console.log(res.data);
     setMsg(res.data.msg)
-    setId(res.data.id)
+    SetId(res.data.id)
   }
   useEffect(() => {
     getName()
@@ -50,7 +50,7 @@ const ProductDetailsCustome = () => {
     try {
 
       console.log("Customer ID:",msg,id);
-      const res = await axios.post("http://localhost:3003/wholewatch/addToCart",{ ...getProducts,cust_id:id});
+      const res = await axios.post("http://localhost:3003/wholewatch/addToCart",{ ...getProducts,cust_id:Id});
      
       console.log(res.data);
       if(res){
