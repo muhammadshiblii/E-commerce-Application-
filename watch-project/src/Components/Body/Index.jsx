@@ -75,18 +75,9 @@ const Index = () => {
             <div className="collapse navbar-collapse nav-main-ind" id="navbarNav">
 
               <div>
-                {/* <a className="nav-link active" aria-current="page" href="#" id="change-section"><span id='color-nav-ind'>HOME</span></a> */}
+                <a className="nav-link active" aria-current="page" href="#" id="change-section"><span id='color-nav-ind'>HOME</span></a>
               </div>
-              <div>
-                {msg ? (
-                  <>
-                    <Link className="nav-link mx-2 text-uppercase active" to='/CustomerLogin' id="sign-ind"><i className="fa fa-user" aria-hidden="true"></i>   {msg}  <button className='logout-ind' onClick={Logout}>Logout</button></Link>
-
-                  </>
-                ) : (
-                  <Link className="nav-link mx-2 text-uppercase active" to='/CustomerLogin' id="sign-ind">Sign in</Link>
-                )}
-              </div>
+            
               <div>
                 <a className="nav-link active" href="#"><span id='color-nav-ind2'>MEN</span></a>
               </div>
@@ -123,7 +114,18 @@ const Index = () => {
 
       <div className="HOME-IND">
         <span>HOME @ Collections &   Guess Collections </span>
+          <div className='home-ind-2'>
+                {msg ? (
+                  <>
+                    <Link className="nav-link mx-2 text-uppercase active" to='/CustomerLogin' id="sign-ind"><i className="fa fa-user" aria-hidden="true"></i>   {msg}  <button className='logout-ind' onClick={Logout}>Logout</button></Link>
+
+                  </>
+                ) : (
+                  <Link className="nav-link mx-2 text-uppercase active" to='/CustomerLogin' id="sign-ind">Sign in</Link>
+                )}
+              </div>
       </div>
+      
 
       <div className="banner">
 
