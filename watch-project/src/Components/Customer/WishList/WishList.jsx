@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './WishList.scss'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import axios from 'axios';
 
 const WishList = () => {
+
+    const { id } = useParams();
+    const [getPrdct, setProdct] = useState([]);
+
+    const getPrdctDetails = async () => {
+        const res = await axios.get(`http://localhost:3003/sportstrack/getWishlistProduct/${id}`);
+        setProdct(res.data);
+        console.log(getPrdct);
+    };
     return (
         <div>
 
