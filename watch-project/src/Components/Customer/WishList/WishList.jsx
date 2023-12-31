@@ -48,7 +48,7 @@ const WishList = () => {
                 <div className="main-sub-ind">
 
                     <div className="log-phone-ind">
-                        <span><i className="fa fa-phone" aria-hidden="true" ></i></span><Link to={`/whishList`} id='Linkkkkss' ><span id='ind-num'>WishList</span></Link>
+                        <span><i className="fa fa-phone" aria-hidden="true" ></i></span><Link to={`#`} id='Linkkkkss' ><span id='ind-num'>WishList</span></Link>
                     </div>
 
 
@@ -57,7 +57,7 @@ const WishList = () => {
                     </div>
 
                     <div className="log-cart-ind">
-                        <span><Link to={`CartCustomer`} id='Linkkkkss' > CART</Link> </span> <span><Link to={'/CustomerReg'} id='Linkkkkss'><span id='log-ind-l'>LOGIN</span></Link>  OR REGISTER</span>
+                        <span><Link to={`CartCustomer`} id='Linkkkkss' > CART</Link> </span> <span><Link to={'#'} id='Linkkkkss'><span id='log-ind-l'>LOGIN</span></Link>  OR REGISTER</span>
                     </div>
 
 
@@ -96,9 +96,9 @@ const WishList = () => {
                         <div className="shopping-bag-wish-banner-data">
                             <p>Item No: NR6248NM01</p>
                             <span id='price-wish'>{data.price}</span>  <span className='og-price' id='price-wishes'><strike>₹ 99999</strike></span>
-                            <p>Dispatch By2nd Jan 2024</p>
                             {/* <p>  <i className="fa fa-superpowers" aria-hidden="true"></i>  Add Gift Wrap</p> */}
-                            <p> <i className="fa fa-superpowers" aria-hidden="true"></i> Add Gift Message</p>
+                            <p className='product_nmae'> <i className="fa fa-superpowers" aria-hidden="true" ></i>{data.productname}</p>
+                            <p>Dispatch By2nd Jan 2024</p>
                             <div className="main-wish">
                                 <p> <i className="fa fa-heart-o" aria-hidden="true"></i> Come to Whish</p>
                                 <button className='btn-whish' onClick={()=>delProduct(data._id)}> <i className="fa fa-trash-o" aria-hidden="true"></i> Delete From Bag</button>
