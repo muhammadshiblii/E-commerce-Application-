@@ -45,14 +45,14 @@ const WishList = () => {
                         <p> <i className="fa fa-superpowers" aria-hidden="true"></i> Add Gift Message</p>
                      <div className="main-wish">
                      <p> <i className="fa fa-heart-o" aria-hidden="true"></i> Come to Whish</p>
-                     <p> <i className="fa fa-trash-o" aria-hidden="true"></i> Delete From Bag</p>
+                     <button className='btn-whish'> <i className="fa fa-trash-o" aria-hidden="true"></i> Delete From Bag</button>
                      </div>
                         
 
                     </div>
-
+                
                 </div>
-                <button></button>
+             
 
                   
                </div>
