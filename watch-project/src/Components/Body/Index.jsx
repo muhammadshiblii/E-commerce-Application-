@@ -68,7 +68,7 @@ const Index = () => {
         <div className="main-sub-ind">
 
           <div className="log-phone-ind">
-            <span><i className="fa fa-phone" aria-hidden="true" ></i></span><Link to={`/whishList/${id}`} ><span id='ind-num'>WishList</span></Link>
+            <span><i className="fa fa-phone" aria-hidden="true" ></i></span><Link to={`/whishList/${id}`}  id='Linkkkkss'><span id='ind-num'>WISH</span></Link>
           </div>
 
           <div className="text-sub-ind">

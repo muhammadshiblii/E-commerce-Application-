@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './WishList.scss'
 import { Link, useParams } from 'react-router-dom'
 import axios from 'axios';
@@ -9,10 +9,36 @@ const WishList = () => {
     const [getPrdct, setProdct] = useState([]);
 
     const getPrdctDetails = async () => {
-        const res = await axios.get(`http://localhost:3003/sportstrack/getWishlistProduct/${id}`);
+        const res = await axios.get(`http://localhost:3003/wholewatch/getWishlistProduct/${id}`);
         setProdct(res.data);
         console.log(getPrdct);
+
     };
+    useEffect(() => {
+        getPrdctDetails();
+    }, []);
+
+    const delProduct = async (id) => {
+        const userConfirmed = window.confirm("Are you sure you want to delete this product from the wishlist?");
+        if (userConfirmed) {
+            try {
+                const res = await axios.delete(`http://localhost:3003/wholewatch/delWishListProduct/${id}`);
+                console.log(res.data);
+                getPrdctDetails();
+            } catch (error) {
+                console.error("Error deleting product:", error);
+            }
+        }
+    };
+
+
+
+
+
+
+
+
+
     return (
         <div>
 
@@ -37,35 +63,79 @@ const WishList = () => {
 
                 </div>
             </div>
-               
 
-               <div className="Shopping-bag-main">
+
+            <div className="Shopping-bag-main">
+
+
+
+
                 <div className="shopping-bag-wish">
-                    <span>SHOPPING BAG</span>
+                    <span> <i className="fa fa-shopping-bag bag-only-wish" aria-hidden="true"></i> SHOPPING BAG</span>
                 </div>
-                <div className="shopping-bag-wish-banner">
-                    <div className="shopping-bag-wish-banner-images">
-                        <img src="" alt="" />
-                    </div>
-                    <div className="shopping-bag-wish-banner-data">
-                        <p>Item No: NR6248NM01</p>
-                        <span></span>
-                        <p>Dispatch By2nd Jan 2024</p>
-                        <p>  <i className="fa fa-superpowers" aria-hidden="true"></i>  Add Gift Wrap</p>
-                        <p> <i className="fa fa-superpowers" aria-hidden="true"></i> Add Gift Message</p>
-                     <div className="main-wish">
-                     <p> <i className="fa fa-heart-o" aria-hidden="true"></i> Come to Whish</p>
-                     <button className='btn-whish'> <i className="fa fa-trash-o" aria-hidden="true"></i> Delete From Bag</button>
-                     </div>
-                        
 
-                    </div>
-                
-                </div>
-             
 
-                  
-               </div>
+                {getPrdct.length === 0 ? (
+                    <>
+
+                        <p className="no-items-message">No items in the cart</p>
+                        <div className='shpDiv'><Link className='shp-now-btn' to='/'>Shop Now</Link></div>
+
+
+                    </>
+                ) :<>
+
+                {
+                    getPrdct.map((data,index)=>(
+                        <div className="shopping-bag-wish-banner" key={index}>
+
+                        <div className="shopping-bag-wish-banner-images">
+                            <img src={data.banner} alt="" />
+                        </div>
+
+                        <div className="shopping-bag-wish-banner-data">
+                            <p>Item No: NR6248NM01</p>
+                            <span id='price-wish'>{data.price}</span>  <span className='og-price' id='price-wishes'><strike>₹ 99999</strike></span>
+                            <p>Dispatch By2nd Jan 2024</p>
+                            <p>  <i className="fa fa-superpowers" aria-hidden="true"></i>  Add Gift Wrap</p>
+                            {/* <p> <i className="fa fa-superpowers" aria-hidden="true"></i> Add Gift Message</p> */}
+                            <div className="main-wish">
+                                <p> <i className="fa fa-heart-o" aria-hidden="true"></i> Come to Whish</p>
+                                <button className='btn-whish' onClick={()=>delProduct(data._id)}> <i className="fa fa-trash-o" aria-hidden="true"></i> Delete From Bag</button>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    ))
+                   
+                }
+
+         
+            </>
+            
+
+
+
+
+             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
 
 
 

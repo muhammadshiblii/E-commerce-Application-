@@ -332,6 +332,26 @@ export async function AddToWishList(req, res) {
   }
 }
 
+export async function getWishlistProduct(req,res){
+  const { id }=req.params;
+  console.log(id);
+  let task=await wishlist_schema.find({ cust_id:id })
+  console.log(task);
+  res.status(200).send(task)
+}
+
+
+export function delwishListProduct(req,res)
+{
+    const{id}=req.params;
+    const data=wishlist_schema.deleteOne({_id:id})
+    data.then((resp)=>{
+        res.status(200).send(resp)          
+    }).catch((error)=>{
+        res.status(404).send(error)
+    })
+}
+
 
 
 
