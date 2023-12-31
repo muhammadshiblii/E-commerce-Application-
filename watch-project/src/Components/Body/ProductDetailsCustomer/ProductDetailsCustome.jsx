@@ -64,6 +64,23 @@ const ProductDetailsCustome = () => {
     }
   };
 
+  //////add to wishlist
+   
+  const addToWishList = async () => {
+    try {
+      const res = await axios.post("http://localhost:3003/wholewatch/addtowishList", {...getProducts,cust_id:Id});
+      console.log(res.data);
+      if(res){
+        alert("Added To Wishlist")
+      }else{
+        alert("Error adding product to Wishlist. Please try again.")
+      }
+    } catch (error) {
+        console.error("Error adding product to Wishlist:", error);
+        alert("Error adding product to Wishlist. Please try again.");
+    }
+  };
+
 
 
 
@@ -147,7 +164,7 @@ const ProductDetailsCustome = () => {
             </div>
             <div className="btn-cust-add-cart">
               <div className='Add-cart-cus'><button onClick={addToCart}> Add To Cart <i className="fa fa-shopping-cart" aria-hidden="true"></i> </button> </div>
-              <div className='Add-cart-cus'><button>Add To Wish <i className="fa fa-picture-o wishhh" aria-hidden="true"></i> </button></div>
+              <div className='Add-cart-cus'><button onClick={addToWishList}>Add To Wish <i className="fa fa-picture-o wishhh" aria-hidden="true"></i> </button></div>
             </div>
 
 

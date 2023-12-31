@@ -24,23 +24,20 @@ const Cartcustomer = () => {
       setTotalPrice(totalPriceSum);
     }, [getPrdct]);
   
-    const qty = (e, index) => {
-        const selectedQuantity = parseInt(e.target.value, 10);
-        const productPrice = getPrdct[index].price;
-      
-        if (!isNaN(productPrice) && isFinite(productPrice)) {
-          console.log('Valid product price:', productPrice);
-      
-          const updatedPrice = selectedQuantity * productPrice;
-          console.log('Updated price:', updatedPrice);
-      
-          const updatedGetPrdct = [...getPrdct];
-          updatedGetPrdct[index].price = updatedPrice;
-          setProdct(updatedGetPrdct);
-        } else {
-          console.error('Invalid product price:', productPrice);
-        }
-      };
+    const qty=(e,index)=>{
+      const selectedQty=parseInt(e.target.value,10);
+      const price=getPrdct[index].price;
+  
+      if(!isNaN(price)){
+        const updatedPrice=price*selectedQty;
+        console.log(updatedPrice);
+        const updatedGetPrdct = [...getPrdct];
+        console.log(getPrdct);
+        updatedGetPrdct[index].price=updatedPrice
+        setProdct(updatedGetPrdct)
+      }
+    }
+  
   
     const BuyNow = async (e) => {
       e.preventDefault();
@@ -149,7 +146,7 @@ const Cartcustomer = () => {
           <table>
             <tr>
               <td className='total-text' id='td'>Total</td>
-              <td className='total-text'>₹ {totalPrice ? totalPrice + 80000 : 99}</td>
+              <td className='total-text'>₹ {totalPrice ? totalPrice + 99 : 99}</td>
             </tr>
           </table>
 

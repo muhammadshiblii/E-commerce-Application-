@@ -15,6 +15,7 @@ import ProductFulldetails from './Components/Admin/ProductFulldetails/ProductFul
 import Editproduct from './Components/Admin/Editproduct/Editproduct'
 import ProductDetailsCustome from './Components/Body/ProductdetailsCustomer/ProductDetailsCustome'
 import Cartcustomer from './Components/Customer/CartCutomer/Cartcustomer'
+import WishList from './Components/Customer/WishList/WishList'
 
 
 
@@ -41,6 +42,7 @@ function App() {
       <Route path='/editproducts/:id' Component={Editproduct}/>
       <Route path='/productDetailsCustomer/:id' Component={ProductDetailsCustome}/>
       <Route path='/CartCustomer/:id' Component={Cartcustomer}/>
+      <Route path='/whishList/:id' Component={WishList}/>
       
       
       

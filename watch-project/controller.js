@@ -3,6 +3,7 @@ import category_schema from './category.model.js'
 import product_schema from './product.model.js'
 import customer_schema from './customer.model.js'
 import cart_schema from './cart.model.js'
+import wishlist_schema from './wishList.model.js'
 import bcrypt from 'bcrypt'
 import jsonwebtoken from 'jsonwebtoken'
 import path from 'path'
@@ -317,6 +318,25 @@ export async function AddToCart(req, res) {
     res.status(500).send("Internal Server Error");
   }
 }
+/////// Addd to wish 
+
+export async function AddToWishList(req, res) {
+  try {
+    const { ...productdetails } = req.body;
+    const task = await wishlist_schema.create({ ...productdetails });
+    console.log(task);
+    res.status(200).send(task);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
+}
+
+
+
+
+
+
 
 export async function getCartProduct(req,res){
   const { id }=req.params;

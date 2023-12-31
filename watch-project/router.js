@@ -33,6 +33,7 @@ router.route("/getAllProducts").get(controller.getAllProducts);
 router.route("/getCartProduct/:id").get(controller.getCartProduct);
 router.route("/delAlltProduct/:id").delete(controller.deleteAllProducts);
 router.route("/delCartProduct/:id").delete(controller.delCartProduct);
+router.route("/addtowishList").post(controller.AddToWishList);
 
 
 
