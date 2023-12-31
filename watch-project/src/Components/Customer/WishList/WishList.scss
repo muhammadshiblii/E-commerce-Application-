@@ -1,0 +1,41 @@
+.Shopping-bag-main{
+    margin-top: 12%;
+    margin-left: 14%;
+
+
+    .shopping-bag-wish{
+
+        border-bottom: 1px solid rgb(189, 187, 187);
+        width: 60%;
+        padding-bottom: 40px;
+    
+    }
+    .shopping-bag-wish span{
+        font-size: 1.5rem;
+        line-height: 1.9375rem;
+        font-weight: 500;
+        color: #000;
+        font-family: sans-serif;
+    }
+    .shopping-bag-wish-banner{
+        width: 80%;
+        border: 1px solid black;
+        height: 300px;
+        margin-top: 20px;
+        display: flex;
+    }
+    .shopping-bag-wish-banner-images{
+        width: 30%;
+        border: 1px solid red;
+        height: 200px;
+        margin-top: 20px;
+        margin-left: 2%;
+
+    }
+    .shopping-bag-wish-banner-data p{
+        margin-top: 20px;
+        margin-left: 30px;
+        color: rgb(70, 69, 69);
+        font-size: 16px;
+    }
+}

@@ -7,6 +7,7 @@ const Index = () => {
 
   const [id, setId] = useState("")
   const naviagate = useNavigate()
+  // const navigateItself=useNavigate()
   const [msg, setMsg] = useState("")
   const value = JSON.parse(localStorage.getItem('customer_token'));
 
@@ -35,7 +36,7 @@ const Index = () => {
 
   const [getProducts, setProducts] = useState([])
 
-  // http://localhost:7000/sportstrack/getAllProducts
+  
   const getAllProducts = async () => {
     const res = await axios.get("http://localhost:3003/wholewatch/getAllProducts")
     // console.log(res.data);
@@ -45,6 +46,16 @@ const Index = () => {
   useEffect(() => {
     getAllProducts()
   }, [])
+
+
+  // const gotoCartOrWishList=(e)=>{
+  //   e.preventDefault()
+  //   if(msg.length===0){
+  //     alert ("Please Login")
+  //     navigateItself("/CustomerLogin")
+  //   }
+  // }
+
 
 
 
@@ -57,7 +68,7 @@ const Index = () => {
         <div className="main-sub-ind">
 
           <div className="log-phone-ind">
-            <span><i className="fa fa-phone" aria-hidden="true"></i></span> <span id='ind-num'>222-5561517</span>
+            <span><i className="fa fa-phone" aria-hidden="true" ></i></span><Link to={`/whishList/${id}`} ><span id='ind-num'>WishList</span></Link>
           </div>
 
           <div className="text-sub-ind">
@@ -65,7 +76,7 @@ const Index = () => {
           </div>
 
           <div className="log-cart-ind">
-            <span><Link to={`CartCustomer/${id}`} id='Linkkkkss'> CART</Link> </span> <span><Link to={'/CustomerReg'} id='Linkkkkss'><span id='log-ind-l'>LOGIN</span></Link>  OR REGISTER</span>
+            <span><Link to={`CartCustomer/${id}`} id='Linkkkkss' > CART</Link> </span> <span><Link to={'/CustomerReg'} id='Linkkkkss'><span id='log-ind-l'>LOGIN</span></Link>  OR REGISTER</span>
           </div>
 
         </div>
