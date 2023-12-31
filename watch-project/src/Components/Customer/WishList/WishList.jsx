@@ -98,7 +98,7 @@ const WishList = () => {
                             <span id='price-wish'>{data.price}</span>  <span className='og-price' id='price-wishes'><strike>₹ 99999</strike></span>
                             <p>Dispatch By2nd Jan 2024</p>
                             <p>  <i className="fa fa-superpowers" aria-hidden="true"></i>  Add Gift Wrap</p>
-                            {/* <p> <i className="fa fa-superpowers" aria-hidden="true"></i> Add Gift Message</p> */}
+                            <p> <i className="fa fa-superpowers" aria-hidden="true"></i> Add Gift Message</p>
                             <div className="main-wish">
                                 <p> <i className="fa fa-heart-o" aria-hidden="true"></i> Come to Whish</p>
                                 <button className='btn-whish' onClick={()=>delProduct(data._id)}> <i className="fa fa-trash-o" aria-hidden="true"></i> Delete From Bag</button>
