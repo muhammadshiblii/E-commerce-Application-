@@ -44,7 +44,7 @@ const ProductDetailsCustome = () => {
   }, [])
   console.log(id);
 
-  ////// adding to cart /////
+  ////// adding to cart //////
 
   const addToCart = async () => {
     try {
