@@ -21,7 +21,7 @@ const ProductDetailsCustome = () => {
   const getProduct = async () => {
     const res = await axios.get(`http://localhost:3003/wholewatch/getProduct/${id}`)
     setProduct(res.data)
-    // console.log(getProducts);
+    /////// console.log(getProducts);
   }
 
   useEffect(() => {
