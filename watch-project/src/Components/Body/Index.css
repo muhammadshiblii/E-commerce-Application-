@@ -1069,4 +1069,37 @@
 }
 @media (min-width:980px) and (max-width:1198.98px) {
 
+    .main-ind {
+        background-color: rgba(0, 0, 0, 0.942);
+        height: auto;
+        width: 100%;
+    }
+
+    .main-sub-ind {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .log-phone-ind {
+        color: white;
+        font-size: 15px;
+        margin-left: 2%;
+        margin-top: 12px;
+    }
+
+    .text-sub-ind p::before {
+        content: "FREE WATCH  WORTH ₹1,950 ON ₹4,000 SHOP";
+        animation: animate infinite 3s;
+        background-color: black;
+        padding: 7px 40px;
+        border-radius: 40px;
+        color: white;
+        font-family: ano-bold_regular, Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        text-align: center;
+    }
+
+
+
 }
