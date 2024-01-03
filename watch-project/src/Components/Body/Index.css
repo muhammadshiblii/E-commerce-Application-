@@ -763,7 +763,7 @@
     /* footer  */
     .footer-main {
         height: auto;
-        margin-top: 0%;
+        margin-top: %;
         width: 180%;
         margin-left: 10%;
 
@@ -776,7 +776,7 @@
     }
 
     .footer-icons-main i {
-        margin-top: 30%;
+        margin-top: 8%;
         font-size: 27px;
         margin-bottom: 30px;
     }
