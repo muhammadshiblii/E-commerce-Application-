@@ -422,7 +422,8 @@
     font-size: 18px;
     color: #08080b;
 }
-.og-price{
+
+.og-price {
     margin-top: 3px;
 }
 
@@ -655,7 +656,15 @@
     .ind-classic {
         display: inline;
         margin-top: 20px;
-        gap: 20px;
+      
+       
+    }
+    .pricer-ind{
+         text-align: center;
+         margin-left: 50%;
+    }
+    .golden{
+        text-align: center;
     }
 
     .ind-1st-image img {
@@ -910,6 +919,145 @@
 
 
 
+
+
+
+
+
+
+
+}
+
+@media (min-width:580px) and (max-width:881.98px) {
+
+    .main-ind {
+        background-color: rgba(0, 0, 0, 0.942);
+        height: auto;
+        width: 100%;
+    }
+
+    .main-sub-ind {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .log-phone-ind {
+        color: white;
+        font-size: 15px;
+        margin-left: 2%;
+        margin-top: 12px;
+    }
+
+    .text-sub-ind p::before {
+        content: "FREE WATCH  WORTH ₹1,950 ON ₹4,000 SHOP";
+        animation: animate infinite 3s;
+        background-color: black;
+        padding: 7px 120px;
+        border-radius: 40px;
+        color: white;
+        font-family: ano-bold_regular, Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /* //////bannner ///// */
+    .banner-ind-tissot {
+        background-image: url("/Banner-Tissot.avif");
+        height: 400px;
+        width: 90%;
+        margin-left: 5%;
+        border-radius: 10px;
+        margin-top: 10%;
+        background-size: cover;
+
+    }
+
+    #banner-para-tissot {
+        color: white;
+        font-size: 25px;
+        margin-left: 7%;
+        padding-top: 9%;
+
+    }
+
+    #para-btn-discover {
+        background-color: rgb(222, 17, 17);
+        padding: 10px 80px;
+        border: 1px solid rgb(91, 15, 15);
+        margin-left: 12%;
+        margin-top: 1%;
+        border-radius: 20px;
+        color: white;
+
+    }
+
+    #para-btn-discover:hover {
+        background-color: rgb(123, 17, 17);
+
+    }
+
+    /* ////////About */
+    .About-tissot-ind {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 98%;
+    }
+
+    .About-tissot-ind-contents {
+        width: 90%;
+
+    }
+
+    .About-tissot-ind-contents h5 {
+        margin-top: 20%;
+        margin-left: 10%;
+        font-size: 38px;
+        font-weight: 460;
+        font-family: sans-serif;
+    }
+
+    #para-tissot {
+        margin-left: 10%;
+        width: 80%;
+        font-size: 19.5px;
+        font-weight: 300;
+        margin-top: 20px;
+        color: #1e1e1e;
+        text-align: justify;
+    }
+
+    #para-btn {
+        background-color: rgb(125, 19, 19);
+        padding: 5px 90px;
+        border: 1px solid rgb(91, 15, 15);
+        margin-left: 12%;
+        margin-top: 1%;
+        border-radius: 20px;
+        color: white;
+
+    }
+
+    #para-btn:hover {
+        background-color: rgb(10, 9, 9);
+        border: 1px solid rgb(15, 15, 15);
+        transition: .4s;
+
+    }
+
+    .About-tissot-ind-img img {
+        width: 600px;
+        margin-top: 15%;
+        border-radius: 9px;
+    }
+    .footer-main {
+        height: auto;
+        margin-top: 6%;
+        width: 110%;
+        margin-left: 0%;
+
+    }
 
 
 

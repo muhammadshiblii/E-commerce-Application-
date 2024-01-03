@@ -288,7 +288,7 @@ const Index = () => {
 
         </div>
 
-        <div className="ind-6images-full-section-2"><span>Golden Watches</span></div>
+        <div className="ind-6images-full-section-2"><span className='golden'>Golden Watches</span></div>
 
         <div className="ind-classic">
           {
@@ -299,7 +299,7 @@ const Index = () => {
                     <img src={data.banner} alt="" />
                   </div>
                   <div className="prices-ind">
-                    <div><p className='price-ind'>₹ {data.price}</p></div>
+                    <div className='pricer-ind'><p className='price-ind'>₹ {data.price}</p></div>
                     <div><strike><p className='og-price'>₹ 99988</p></strike></div>
                   </div>
 
