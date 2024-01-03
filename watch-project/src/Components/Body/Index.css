@@ -928,7 +928,7 @@
 
 }
 
-@media (min-width:580px) and (max-width:881.98px) {
+@media (min-width:580px) and (max-width:991.98px) {
 
     .main-ind {
         background-color: rgba(0, 0, 0, 0.942);
@@ -953,11 +953,11 @@
         content: "FREE WATCH  WORTH ₹1,950 ON ₹4,000 SHOP";
         animation: animate infinite 3s;
         background-color: black;
-        padding: 7px 120px;
+        padding: 7px 40px;
         border-radius: 40px;
         color: white;
         font-family: ano-bold_regular, Helvetica, Arial, sans-serif;
-        font-size: 16px;
+        font-size: 12px;
         text-align: center;
     }
 
