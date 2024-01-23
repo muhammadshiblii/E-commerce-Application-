@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Index.css'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import Navbar from '../Navbar/Navbar'
 
 const Index = () => {
 
@@ -65,7 +66,7 @@ const Index = () => {
     <div>
 
       <div className="main-ind">
-        <div className="main-sub-ind">
+        {/* <div className="main-sub-ind">
 
           <div className="log-phone-ind">
             <span><i className="fa fa-phone" aria-hidden="true" ></i></span><Link to={`/whishList/${id}`}  id='Linkkkkss'><span id='ind-num'>WISH</span></Link>
@@ -79,8 +80,8 @@ const Index = () => {
             <span><Link to={`CartCustomer/${id}`} id='Linkkkkss' > CART</Link> </span> <span><Link to={'/CustomerReg'} id='Linkkkkss'><span id='log-ind-l'>LOGIN</span></Link>  OR REGISTER</span>
           </div>
 
-        </div>
-
+        </div> */}
+        <Navbar/>
       </div>
       <div className="nav-top">
         <div className="nav-topl">
@@ -233,8 +234,7 @@ const Index = () => {
           <img src="/newlaunch.jpg" alt="" />
         </div>
       </div>
-
-
+      
       <div className='whole-data-and-img-sect'>
         <div className="ind-6images-full-section"><span>CATEGORIES</span></div>
         <div className="ind-6images-full-section-2"><span>C series</span></div>
@@ -267,12 +267,12 @@ const Index = () => {
             getProducts.filter((data) => data.category_name === 'Narzo Series')
               .map((data, index) => (
                 <Link key={index} to={`/productDetailsCustomer/${data._id}`} className='Link-view-products-ind'>
-                  <div className="ind-1st-image">
+                  <div className="ind-2nd-image">
                     <img src={data.banner} alt="" />
                   </div>
                   <div className="prices-ind">
                     <div><p className='price-ind'>₹ {data.price}</p></div>
-                    <div><strike><p className='og-price'>₹ 99988</p></strike></div>
+                    <div><strike><p className='og-price'>₹ 99,988</p></strike></div>
                   </div>
 
                 </Link>
@@ -289,7 +289,7 @@ const Index = () => {
             getProducts.filter((data) => data.category_name === 'Number Series')
               .map((data, index) => (
                 <Link key={index} to={`/productDetailsCustomer/${data._id}`} className='Link-view-products-ind'>
-                  <div className="ind-1st-image">
+                  <div className="ind-3rd-image">
                     <img src={data.banner} alt="" />
                   </div>
                   <div className="prices-ind">
@@ -305,6 +305,45 @@ const Index = () => {
 
 
       </div>
+
+      <div className="best-sellers">
+        <h2><i class="fa fa-tag" aria-hidden="true"></i>Best Sellers</h2>
+
+
+        <div className="best-sellers-images">
+          <div className="best-sellers1-img">
+            <img src="/bestsellers.jpg" alt="" />
+            <div className="best-sellers-text">
+              <span>Upto <i class="fa fa-inr" aria-hidden="true"></i>2,000 Off</span>
+              <h2>realme 11 5G</h2>
+              <p>Double Ace , Double Leap</p>
+              <h6>From <i class="fa fa-inr from" aria-hidden="true">16,999</i></h6>
+            </div>
+          </div>
+          <div className="best-sellers2-img">
+            <div className="b-s-i1">
+              <img src="/bestsellers1.jpg" alt="" />
+              <div className="best-sellers-text2">
+                <span>Upto <i class="fa fa-inr" aria-hidden="true"></i>2,300 Off</span>
+                <h2>realme narzo N53</h2>
+                <p>Sales Champion of the Year</p>
+                <h6>From <i class="fa fa-inr from" aria-hidden="true">8,999 </i></h6>
+              </div>
+            </div>
+            <div className="b-s-i2">
+              <img src="/bestsellers2.jpg" alt="" />
+              <div className="best-sellers-text3">
+                <span>Upto<i class="fa fa-inr" aria-hidden="true"></i>2,000 Off</span>
+                <h2>realme 11 5G</h2>
+                <p>Leap Up With 5G</p>
+                <h6>From <i class="fa fa-inr from" aria-hidden="true"> 14,999</i></h6>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
       <div className="feedback-img">
         <img src="/feedback.jpg" alt="" />
       </div>

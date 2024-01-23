@@ -1,9 +1,8 @@
 .main-ind {
     background-color: rgba(0, 0, 0, 0.942);
-    height: 45px;
+    height: 40px;
     width: 100%;
 }
-
 .log-phone-ind {
     color: white;
     font-size: 13px;
@@ -13,7 +12,6 @@
 
 .text-sub-ind {
     margin-top: 8px;
-    /* font-size: 21px; */
 }
 
 .text-sub-ind p::before {
@@ -31,7 +29,7 @@
 @keyframes animate {
 
     0% {
-        content: " USE ON YOUR FIRST ORDER ON RS. 10200. OFF";
+        content: "USE ON YOUR FIRST ORDER ON RS. 10200. OFF";
     }
 
     50% {
@@ -39,11 +37,11 @@
     }
 
     75% {
-        content: "LATEST COLLECTIONS 2024 ON ₹11,430 OFF";
+        content: "LATEST COLLECTIONS IN 2024 ON @ ₹11,430 OFF";
     }
 
     100% {
-        content: "FAST CHARGING STARTS @ ₹15,950 ON ₹26,430 OFF";
+        content: "FAST CHARGING TECH@ ₹15,950 ON ₹26,430 OFF";
     }
 }
 
@@ -65,7 +63,7 @@
 }
 
 .logout-ind {
-    background-color: #08080be4;
+    background-color: #060632e4;
     color: white;
     border: none;
     padding: 1px 12px;
@@ -106,9 +104,7 @@
 .nav-main-ind {
     display: flex;
     justify-content: center;
-    gap: 70px;
-    padding: 10px;
-
+    gap: 20px;
 
 }
 
@@ -129,21 +125,22 @@
 
 .HOME-IND {
     color: #1e1e1e;
-    margin-left: 10%;
-    margin-top: 20px;
+    margin-left: 10px;
     display: flex;
+    padding: 10px;
+    justify-content: space-between;
 
 }
-
-.home-ind-2 {
-    margin-left: 2%;
+.home-ind-2{
+    margin-right: 8%;
 }
 
 .nav-top{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 8px;
+    margin-top: 1%;
+
     
 
 }
@@ -190,18 +187,19 @@
 .nav-main-ind {
     display: flex;
     justify-content: center;
-    gap: 50px;
-    /* background-color: rgb(92, 8, 8); */
+    gap: 60px;
+    height: 70px;
 }
  #spanss:hover{
     color: rgb(255, 132, 0);
 }
 .nav-main-ind img{
     width: 7%;
-    margin-right: 5%;
+    margin-right: 10%;
 }
 .nav-main-ind a span {
     color: rgb(42, 2, 2);
+    font-size: 19px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
@@ -328,7 +326,7 @@
 .new-launch h2{
     text-align: center;
     font-size: 40px;
-    font-weight: 800;
+    font-weight: 500;
     font-family: 'Ubuntu', sans-serif ;
     margin-top: 3%;
     margin-bottom: 2%;
@@ -344,11 +342,99 @@ border-top-left-radius: 20px;
 border-bottom-right-radius: 20px;
 border-bottom-left-radius: 20px;
 }
+.best-sellers-images{
+    display: flex;
+    width: 83%;
+    margin: auto;
+}
+.best-sellers h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif ;
+    margin-top: 1.4%;
+    margin-bottom: 2%;
+}
+.best-sellers i{
+    margin-right: 10px;
+}
+
+.best-sellers1-img{
+    width: 50%;
+    padding: 1%;
+    position: relative;
+}
+.best-sellers1-img img{
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.best-sellers2-img{
+    width: 50%;
+   
+}
+.best-sellers2-img img{
+    width: 100%;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding: 2%;
+}
+
+.b-s-i1{
+    position: relative;
+}
+.b-s-i2{
+    position: relative;
+}
+
+.best-sellers-text{
+    position: absolute;
+    left: 10%;
+    top: 69%;
+    color: aliceblue;
+}
+.best-sellers-text2{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+}
+.best-sellers-text3{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    color: white;
+}
+.best-sellers-text span,.best-sellers-text2 span,.best-sellers-text3 span{
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 50px;
+}
+.best-sellers-text2 h6,.best-sellers-text3 h6{
+    margin-top: 48%;
+}
+
+.best-sellers-text h2,.best-sellers-text2 h2,.best-sellers-text3 h2{
+    font-weight:bolder;
+    font-size: 36px;
+}
+.best-sellers-text .from,.best-sellers-text2 .from,.best-sellers-text3 .from{
+    color: rgb(253, 5, 5);
+    font-size: 20px;
+}
+
+
+
 
 
 .feedback-img{
-    width: 80%;
+    width: 70%;
     margin: auto;
+    margin-top: 2%;
 }
 .feedback-img img{
 width: 100%;
@@ -743,9 +829,10 @@ border-bottom-left-radius: 20px;
 }
 
 .ind-1st-image img {
-    margin-left: 10%;
+    margin: auto;
     border-radius: 9px;
-    width: 80%;
+    width:100%;
+    height: 320px;
 
 }
 
@@ -756,97 +843,36 @@ border-bottom-left-radius: 20px;
     cursor: pointer;
 
 }
-
-/* ////////About */
-.About-tissot-ind {
-    display: flex;
-    justify-content: space-between;
-    width: 98%;
-}
-
-.About-tissot-ind-contents {
-    width: 50%;
-
-}
-
-.About-tissot-ind-contents h5 {
-    margin-top: 20%;
-    margin-left: 10%;
-    font-size: 38px;
-    font-weight: 460;
-    font-family: sans-serif;
-}
-
-#para-tissot {
-    margin-left: 10%;
-    width: 80%;
-    font-size: 19.5px;
-    font-weight: 300;
-    margin-top: 20px;
-    color: #1e1e1e;
-    text-align: justify;
-}
-
-#para-btn {
-    background-color: rgb(125, 19, 19);
-    padding: 5px 90px;
-    border: 1px solid rgb(91, 15, 15);
-    margin-left: 12%;
-    margin-top: 1%;
-    border-radius: 20px;
-    color: white;
-
-}
-
-#para-btn:hover {
-    background-color: rgb(10, 9, 9);
-    border: 1px solid rgb(15, 15, 15);
-    transition: .4s;
-
-}
-
-.About-tissot-ind-img img {
-    width: 600px;
-    margin-top: 15%;
+.ind-2nd-image img {
+    margin: auto;
     border-radius: 9px;
-}
-
-/* //////bannner ///// */
-.banner-ind-tissot {
-    background-image: url("/Banner-Tissot.avif");
-    height: 400px;
-    width: 90%;
-    margin-left: 5%;
-    border-radius: 10px;
-    margin-top: 10%;
-    background-size: cover;
+    width:100%;
+    height: 320px;
 
 }
 
-#banner-para-tissot {
-    color: white;
-    font-size: 45px;
-    margin-left: 7%;
-    padding-top: 9%;
+.ind-2nd-image img:hover {
+
+    transform: scale(1.07);
+    transition: .2s;
+    cursor: pointer;
+
+}
+.ind-3rd-image img {
+    margin: auto;
+    border-radius: 9px;
+    width:100%;
+    height: 320px;
 
 }
 
-#para-btn-discover {
-    background-color: rgb(222, 17, 17);
-    padding: 10px 100px;
-    border: 1px solid rgb(91, 15, 15);
-    margin-left: 12%;
-    margin-top: 1%;
-    border-radius: 20px;
-    color: white;
+.ind-3rd-image img:hover {
+
+    transform: scale(1.07);
+    transition: .2s;
+    cursor: pointer;
 
 }
-
-#para-btn-discover:hover {
-    background-color: rgb(123, 17, 17);
-
-}
-
 
 @media (min-width:330px) and (max-width:575.98px) {
 

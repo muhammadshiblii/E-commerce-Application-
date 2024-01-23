@@ -37,13 +37,31 @@ const Cartcustomer = () => {
     },[])
 
   
+    // useEffect(() => {
+    //   const totalPriceSum = getPrdct.reduce((sum, product) => sum + Number(product.price * product.quantity), 0);
+    //   console.log(totalPriceSum);
+    //   setTotalPrice(totalPriceSum);
+    // }, [getPrdct]);
+
     useEffect(() => {
-      const totalPriceSum = getPrdct.reduce((sum, product) => sum + Number(product.price * product.quantity), 0);
-      console.log(totalPriceSum);
+      const totalPriceSum = getPrdct.reduce((sum, product) => sum + Number(product.price), 0);
       setTotalPrice(totalPriceSum);
     }, [getPrdct]);
-
-
+  
+    const qty=(e,index)=>{
+      const selectedQty=parseInt(e.target.value,10);
+      const price=getPrdct[index].price;
+  
+      if(!isNaN(price)){
+        const updatedPrice=price*selectedQty;
+        console.log(updatedPrice);
+        const updatedGetPrdct = [...getPrdct];
+        console.log(getPrdct);
+        updatedGetPrdct[index].price=updatedPrice
+        setProdct(updatedGetPrdct)
+      }
+    }
+  
 
 
 
@@ -138,7 +156,7 @@ const Cartcustomer = () => {
             <div className="details-details-section">
               <p className="item-name">{data.productname}</p>
               <p className="description">{data.Description}</p>
-              <select name="" id=""  onChange={(e) =>{updateQuantity(data.prod_id,e.target.value)}}>
+              <select name="" id=""  onChange={(e) => qty(e, index)}>
                 <option value="1">Qty : 1</option>
                 <option value="2">Qty : 2</option>
                 <option value="3">Qty : 3</option>
@@ -149,7 +167,7 @@ const Cartcustomer = () => {
                 <option value="8">Qty : 8</option>
               </select>
             <div className='price-div'>
-              <span className='price'>₹ {data.price*data.quantity}</span>
+              <span className='price'>₹ {data.price}</span>
               <span className='og-price'><strike>₹ 99999</strike></span>
             </div>
            <button className='delBtn' onClick={()=>delCartPrdct(data._id)}>Delete</button>
